@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/theme_backgrond">
+
+    <include layout="@layout/ui_view_toolbar"/>
+
+    <LinearLayout
+        android:id="@+id/ll_message1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fifty"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/ten"
+        android:paddingRight="@dimen/ten"
+        android:background="@android:color/white"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="@dimen/ten"
+            android:text="@string/account_name"
+            android:textSize="@dimen/t_eighteen"
+            android:textColor="@color/theme_black"/>
+        <ImageView
+            android:contentDescription="@string/app_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/qianhuijiantou"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_message2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fifty"
+        android:gravity="center_vertical"
+        android:layout_marginTop="@dimen/one"
+        android:paddingLeft="@dimen/ten"
+        android:paddingRight="@dimen/ten"
+        android:background="@android:color/white"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="@dimen/ten"
+            android:text="@string/account_in"
+            android:textSize="@dimen/t_eighteen"
+            android:textColor="@color/theme_black"/>
+        <ImageView
+            android:contentDescription="@string/app_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/qianhuijiantou"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_message3"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fifty"
+        android:gravity="center_vertical"
+        android:layout_marginTop="@dimen/one"
+        android:paddingLeft="@dimen/ten"
+        android:paddingRight="@dimen/ten"
+        android:background="@android:color/white"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="@dimen/ten"
+            android:text="@string/account_out"
+            android:textSize="@dimen/t_eighteen"
+            android:textColor="@color/theme_black"/>
+        <ImageView
+            android:contentDescription="@string/app_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/qianhuijiantou"/>
+    </LinearLayout>
+</LinearLayout>

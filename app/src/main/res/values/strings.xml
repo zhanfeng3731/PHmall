@@ -1,0 +1,108 @@
+<resources>
+    <string name="app_name">PHmall</string>
+    <!-- 状态 -->
+    <string name="app_login">登录</string>
+    <string name="app_password">密码</string>
+    <string name="app_register">注册</string>
+    <string name="app_logout">退出登录</string>
+    <string name="app_submit">提交</string>
+    <string name="app_search">搜索</string>
+    <string name="app_sure">确定</string>
+    <string name="app_cancel">取消</string>
+    <string name="app_setting">设置</string>
+    <string name="app_more">更多</string>
+    <string name="app_edit">编辑</string>
+    <string name="app_del">删除</string>
+    <string name="app_clear">清空</string>
+    <string name="app_number">100</string>
+    <string name="app_user">李小萌</string>
+    <string name="app_phone">13579246810</string>
+    <!-- 模块 -->
+    <string name="tab1">首页</string>
+    <string name="tab2">分类</string>
+    <string name="tab3">购物车</string>
+    <string name="tab4">我的</string>
+    <!-- 登录 -->
+    <string name="hint_realname">请输入您的姓名</string>
+    <string name="hint_username">请输入手机号/用户名</string>
+    <string name="hint_password">请输入密码</string>
+    <string name="txt_remember">&#160;七天内自动登录</string>
+    <string name="txt_forget">忘记密码</string>
+    <string name="txt_register">&#160;没有账号，点击注册&#160;</string>
+    <!-- 注册 -->
+    <string name="reg_phone">手机号&#160;&#160;&#160;&#160;</string>
+    <string name="hint_code">请输入验证码</string>
+    <string name="reg_pass">密码&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</string>
+    <string name="hint_pass">请输入密码</string>
+    <string name="reg_repass">确认密码</string>
+    <string name="hint_repass">请再次输入密码</string>
+    <string name="reg_code">获取验证码</string>
+    <!-- 首页 -->
+    <string name="sign">签到</string>
+    <string name="task1">扫一扫</string>
+    <string name="task2">推广码</string>
+    <string name="task3">消息</string>
+    <string name="task4">摇红包</string>
+    <string name="sys_data">系统数据</string>
+    <string name="sys_title1">上一天新增普积分总量</string>
+    <string name="sys_title2">上一天返还惠积分总量</string>
+    <string name="sys_title3">上一天全返单元总量</string>
+    <string name="sys_title4">上一天每单元返还积分数</string>
+    <string name="user_data">用户数据</string>
+    <string name="user_title1">预存款总额(元)</string>
+    <string name="user_title2">普积分总数(分)</string>
+    <string name="user_title3">惠积分总数(分)</string>
+    <string name="user_btn1">充值</string>
+    <string name="user_btn2">提现</string>
+    <string name="user_detail">查看明细</string>
+    <string name="home_nounce">最新公告</string>
+    <string name="home_info">资讯中心</string>
+    <!-- 个人中心 -->
+    <string name="self_order">全部订单</string>
+    <string name="self_finance">我的财产</string>
+    <string name="self_more">查看全部</string>
+    <string name="self_spread">我的推广海报</string>
+    <string name="self_plan">我的创业计划</string>
+    <string name="self_setting">个人设置</string>
+    <string name="self_address">收货地址管理</string>
+    <string name="self_noline">线下收银</string>
+    <string name="self_personal">个人开店</string>
+    <!-- 消息 -->
+    <string name="news1">通知消息</string>
+    <string name="news2">交易消息</string>
+    <string name="news3">活动消息</string>
+    <string name="news4">资产变动</string>
+    <string name="no_new">暂无新消息</string>
+    <!-- 签到 -->
+    <string name="sign_score">我的积分</string>
+    <string name="sign_caption">活动说明</string>
+    <string name="sign_no">未签到</string>
+    <string name="sign_record">签到记录</string>
+    <string name="sign_success">签到成功</string>
+    <!-- 会员计划 -->
+    <string name="member_center">会员中心</string>
+    <string name="member_level1">普通会员</string>
+    <string name="member_level2">创业会员</string>
+    <string name="member_level3">董事会员</string>
+    <string name="member_level4">代理商</string>
+    <string name="member_up">升级</string>
+    <!-- 线下收银 -->
+    <string name="cash_score">库存积分</string>
+    <string name="cash_merchant">门店账号</string>
+    <string name="hint_merchant">请输入门店账号</string>
+    <string name="cash_password">门店密码</string>
+    <string name="cash_admin">会员账号</string>
+    <string name="hint_admin">请输入会员账号</string>
+    <string name="cash_money">收款金额</string>
+    <string name="hint_money">请输入收款金额</string>
+    <string name="cash_intro">收款说明</string>
+    <string name="hint_intro">请输入收款说明</string>
+    <!-- 账户资金 -->
+    <string name="account_name">预存款账户</string>
+    <string name="account_in">在线充值</string>
+    <string name="account_out">申请提现</string>
+    <string name="account_balance">预存款余额</string>
+    <string name="account_tab1">账户余额</string>
+    <string name="account_tab2">充值明细</string>
+    <string name="account_tab3">余额提现</string>
+</resources>

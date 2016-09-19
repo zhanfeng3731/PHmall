@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/snack_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/fl_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/theme_backgrond"/>
+
+    <RadioGroup
+        android:id="@+id/rg_tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@android:color/white">
+        <com.zykj.phmall.widget.TabButton
+            android:id="@+id/rb_tab1"
+            style="@style/tab_button"
+            app:drawable_size="25dp"
+            app:drawableTop="@mipmap/shouyewuzi"
+            android:background="@drawable/check_selected_btn"
+            android:checked="true"
+            android:text="@string/tab1"/>
+
+        <com.zykj.phmall.widget.TabButton
+            android:id="@+id/rb_tab2"
+            style="@style/tab_button"
+            app:drawable_size="25dp"
+            app:drawableTop="@mipmap/fenleiwuzi"
+            android:background="@drawable/check_selected_btn"
+            android:text="@string/tab2" />
+
+        <com.zykj.phmall.widget.TabButton
+            android:id="@+id/rb_tab3"
+            style="@style/tab_button"
+            app:drawable_size="25dp"
+            app:drawableTop="@mipmap/gouwuchewuzi"
+            android:background="@drawable/check_selected_btn"
+            android:text="@string/tab3" />
+
+        <com.zykj.phmall.widget.TabButton
+            android:id="@+id/rb_tab4"
+            style="@style/tab_button"
+            app:drawable_size="25dp"
+            app:drawableTop="@mipmap/wodewuzi"
+            android:background="@drawable/check_selected_btn"
+            android:text="@string/tab4"  />
+    </RadioGroup>
+</LinearLayout>

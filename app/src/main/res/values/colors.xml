@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 全局颜色 -->
+    <color name="theme_color">#FFDB4453</color>
+    <color name="theme_match">#FFEA2C2A</color>
+    <color name="theme_tab">#FF323332</color>
+    <color name="theme_backgrond">#FFEFEFEF</color>
+    <color name="theme_black">#FF323A45</color>
+    <color name="theme_font">#FF808080</color>
+    <color name="theme_button">#FFDB4453</color>
+    <color name="theme_lgray">#FFD6D6D6</color>
+    <color name="theme_hint">#FFAAAAAA</color>
+    <color name="theme_alph">#38000000</color>
+    <!-- 常用颜色 -->
+    <color name="refresh_progress_3">#1e1d22</color>
+    <color name="refresh_progress_2">#00b0ff</color>
+    <color name="refresh_progress_1">#e91e63</color>
+    <!-- 个人中心-->
+    <color name="user_alph">#38FDA72C</color>
+    <color name="user_yellow">#FFFDA72C</color>
+</resources>
