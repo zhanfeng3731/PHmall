@@ -1,12 +1,9 @@
 package com.zykj.phmall.activity;
 
-import android.content.Intent;
 import android.view.View;
-
 import com.zykj.phmall.R;
 import com.zykj.phmall.base.ToolBarActivity;
 import com.zykj.phmall.presenter.AccountPresenter;
-import com.zykj.phmall.presenter.CashPresenter;
 
 import butterknife.OnClick;
 
@@ -39,8 +36,10 @@ public class AccountActivity extends ToolBarActivity<AccountPresenter>{
                 startActivity(DepositActivity.class);
                 break;
             case R.id.ll_message2:
+                startActivity(RechargeActivity.class);
                 break;
             case R.id.ll_message3:
+                startActivity(WithdrawActivity.class);
                 break;
         }
     }

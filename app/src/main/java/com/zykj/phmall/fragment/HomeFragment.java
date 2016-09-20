@@ -13,10 +13,15 @@ import com.bigkoo.convenientbanner.ConvenientBanner;
 import com.bigkoo.convenientbanner.holder.CBViewHolderCreator;
 import com.xys.libzxing.zxing.activity.CaptureActivity;
 import com.zykj.phmall.R;
+import com.zykj.phmall.activity.AccountActivity;
+import com.zykj.phmall.activity.AnnounceActivity;
 import com.zykj.phmall.activity.CashActivity;
+import com.zykj.phmall.activity.ManagerActivity;
 import com.zykj.phmall.activity.MemberActivity;
 import com.zykj.phmall.activity.MessageActivity;
+import com.zykj.phmall.activity.NewsActivity;
 import com.zykj.phmall.activity.SignActivity;
+import com.zykj.phmall.activity.WithdrawActivity;
 import com.zykj.phmall.adapter.BannerHolderView;
 import com.zykj.phmall.adapter.CommonAdapter;
 import com.zykj.phmall.adapter.ViewHolder;
@@ -93,7 +98,7 @@ public class HomeFragment extends BaseFragment<HomePresenter> implements OnItemC
         gd_data.setOnItemClickListener(this);
     }
 
-    @OnClick({R.id.tv_sign,R.id.ll_camera,R.id.ll_spread,R.id.ll_message,R.id.ll_shake})
+    @OnClick({R.id.tv_sign,R.id.ll_camera,R.id.ll_spread,R.id.ll_message,R.id.ll_shake,R.id.ll_message1,R.id.ll_message2})
     protected void door(View view){
         switch (view.getId()){
             case R.id.tv_sign:
@@ -109,6 +114,12 @@ public class HomeFragment extends BaseFragment<HomePresenter> implements OnItemC
                 startActivity(MessageActivity.class);
                 break;
             case R.id.ll_shake:
+                break;
+            case R.id.ll_message1:
+                startActivity(NewsActivity.class);
+                break;
+            case R.id.ll_message2:
+                startActivity(AnnounceActivity.class);
                 break;
         }
     }
@@ -130,11 +141,15 @@ public class HomeFragment extends BaseFragment<HomePresenter> implements OnItemC
     }
 
     private Class[] activitys = new Class[]{MemberActivity.class,CashActivity.class,
-            AccountActivity.class,MemberActivity.class,MemberActivity.class,
+            AccountActivity.class,ManagerActivity.class,WithdrawActivity.class,
             MemberActivity.class,MemberActivity.class,MemberActivity.class,};
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        startActivity(activitys[position]);
+        if(position == 6){
+
+        }else{
+            startActivity(activitys[position]);
+        }
     }
 }

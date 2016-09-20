@@ -46,25 +46,16 @@ public class DepositAdapter extends BaseAdapter<DepositAdapter.DepositHolder, Da
 
     class DepositHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         @Nullable
-        @Bind(R.id.tv_user)
-        TextView tv_user;
+        @Bind(R.id.tv_title)
+        TextView tv_title;
         @Nullable
-        @Bind(R.id.tv_state)
-        TextView tv_state;
+        @Bind(R.id.tv_number)
+        TextView tv_number;
         @Nullable
-        @Bind(R.id.tv_address)
-        TextView tv_address;
-        @Nullable
-        @Bind(R.id.tv_phone)
-        TextView tv_phone;
-        @Nullable
-        @Bind(R.id.tv_name)
-        TextView tv_name;
-        @Nullable
-        @Bind(R.id.tv_date)
-        TextView tv_date;
+        @Bind(R.id.tv_money)
+        TextView tv_money;
 
-        OrderHolder(View view) {
+        DepositHolder(View view) {
             super(view);
             ButterKnife.bind(this, view);
             view.setOnClickListener(this);

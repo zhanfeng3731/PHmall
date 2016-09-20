@@ -1,4 +1,4 @@
-package com.zykj.phmall.fragment;
+package com.zykj.phmall.presenter;
 
 import android.view.View;
 import com.zykj.phmall.presenter.ListPresenter;

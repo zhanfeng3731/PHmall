@@ -5,7 +5,7 @@ import android.view.View;
 
 import com.zykj.phmall.R;
 import com.zykj.phmall.base.ToolBarActivity;
-import com.zykj.phmall.fragment.MessagePresenter;
+import com.zykj.phmall.presenter.MessagePresenter;
 
 import butterknife.OnClick;
 

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/theme_backgrond">
+
+    <include layout="@layout/ui_view_toolbar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fifty"
+        android:background="@android:color/white"
+        android:paddingLeft="@dimen/fifteen"
+        android:paddingRight="@dimen/fifteen"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_money"
+            android:textSize="@dimen/t_eighteen"
+            android:textColor="@color/theme_color"/>
+        <EditText
+            style="@style/inputTheme"
+            android:hint="@string/hint_sum"
+            android:inputType="numberSigned" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_message1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fifty"
+        android:layout_marginTop="@dimen/ten"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@color/white">
+        <ImageView
+            android:layout_width="@dimen/thirty_five"
+            android:layout_height="@dimen/thirty"
+            android:layout_marginLeft="@dimen/fifteen"
+            android:background="@mipmap/weixin"/>
+        <TextView
+            android:id="@+id/pay_weixin"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="@dimen/ten"
+            android:textSize="@dimen/t_sixteen"
+            android:background="@null"/>
+        <ImageView
+            android:id="@+id/sel_weixin"
+            android:layout_width="@dimen/fifty"
+            android:layout_height="@dimen/fifty"
+            android:padding="@dimen/twelve"
+            android:src="@drawable/check_selected_img"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_message2"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/fifty"
+        android:layout_marginTop="@dimen/one"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@color/white">
+        <ImageView
+            android:layout_width="@dimen/thirty_five"
+            android:layout_height="@dimen/thirty"
+            android:layout_marginLeft="@dimen/fifteen"
+            android:background="@mipmap/zhifubao"/>
+        <TextView
+            android:id="@+id/pay_alipay"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="@dimen/ten"
+            android:textSize="@dimen/t_sixteen"
+            android:background="@null"/>
+        <ImageView
+            android:id="@+id/sel_alipay"
+            android:layout_width="@dimen/fifty"
+            android:layout_height="@dimen/fifty"
+            android:padding="@dimen/twelve"
+            android:src="@drawable/check_selected_img"/>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tv_btn"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/forty_five"
+        android:layout_margin="@dimen/twenty"
+        android:text="@string/app_sure"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/t_sixteen"
+        android:background="@drawable/radius_solid_theme"
+        android:gravity="center"/>
+</LinearLayout>

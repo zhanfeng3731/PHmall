@@ -7,7 +7,7 @@ import com.zykj.phmall.R;
 import com.zykj.phmall.adapter.MessageAdapter;
 import com.zykj.phmall.base.SwipeRefreshActivity;
 import com.zykj.phmall.beans.DataBean;
-import com.zykj.phmall.fragment.MessagePresenter;
+import com.zykj.phmall.presenter.MessagePresenter;
 
 /**
  * Created by csh

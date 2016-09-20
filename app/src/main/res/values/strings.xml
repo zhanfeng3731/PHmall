@@ -105,4 +105,20 @@
     <string name="account_tab1">账户余额</string>
     <string name="account_tab2">充值明细</string>
     <string name="account_tab3">余额提现</string>
+    <string name="txt_money">金额</string>
+    <string name="hint_sum">请输入金额</string>
+    <string name="funds_money">提现金额</string>
+    <string name="funds_bank">收款银行</string>
+    <string name="funds_admin">收款账号</string>
+    <string name="funds_name">开户姓名</string>
+    <string name="funds_password">支付密码</string>
+    <string name="funds_hint1">请输入提现金额</string>
+    <string name="funds_hint2">请输入收款银行</string>
+    <string name="funds_hint3">请输入收款账号</string>
+    <string name="funds_hint4">请输入开户姓名</string>
+    <string name="funds_hint5">请输入支付密码</string>
+    <!-- 积分管理 -->
+    <string name="m_score">我的惠积分</string>
+    <string name="m_exchange">兑换</string>
+    <string name="m_change">惠积分变现</string>
 </resources>
