@@ -42,6 +42,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
             <LinearLayout
+                android:id="@+id/ll_myinfo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingTop="@dimen/ten"
@@ -277,6 +278,7 @@
                 android:scrollbars="none"
                 android:numColumns="5"/>
             <LinearLayout
+                android:id="@+id/ll_myasset"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/forty_five"
                 android:layout_marginTop="@dimen/ten"
@@ -327,6 +329,7 @@
                 android:layout_height="200dp"
                 app:canLoop="true"/>
             <LinearLayout
+                android:id="@+id/ll_myposter"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/fifty"
                 android:gravity="center_vertical"
@@ -354,6 +357,7 @@
                     android:src="@mipmap/qianhuijiantou"/>
             </LinearLayout>
             <LinearLayout
+                android:id="@+id/ll_myplan"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/fifty"
                 android:gravity="center_vertical"
@@ -381,6 +385,7 @@
                     android:src="@mipmap/qianhuijiantou"/>
             </LinearLayout>
             <LinearLayout
+                android:id="@+id/ll_mysetting"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/fifty"
                 android:gravity="center_vertical"
@@ -408,6 +413,7 @@
                     android:src="@mipmap/qianhuijiantou"/>
             </LinearLayout>
             <LinearLayout
+                android:id="@+id/ll_myaddress"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/fifty"
                 android:gravity="center_vertical"
@@ -435,6 +441,7 @@
                     android:src="@mipmap/qianhuijiantou"/>
             </LinearLayout>
             <LinearLayout
+                android:id="@+id/ll_mymoney"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/fifty"
                 android:gravity="center_vertical"
@@ -462,6 +469,7 @@
                     android:src="@mipmap/qianhuijiantou"/>
             </LinearLayout>
             <LinearLayout
+                android:id="@+id/ll_myshop"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/fifty"
                 android:gravity="center_vertical"

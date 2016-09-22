@@ -56,6 +56,7 @@
     <dimen name="t_ten">10sp</dimen>
     <dimen name="t_twelve">12sp</dimen>
     <dimen name="t_fourteen">14sp</dimen>
+    <dimen name="t_fifteen">15sp</dimen>
     <dimen name="t_sixteen">16sp</dimen>
     <dimen name="t_seventeen">17sp</dimen>
     <dimen name="t_eighteen">18sp</dimen>

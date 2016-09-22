@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme_backgrond"
+    android:orientation="vertical">
+
+    <include layout="@layout/ui_view_toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/fifty"
+            android:layout_marginTop="@dimen/two"
+            android:background="@android:color/white"
+            android:hint="收货人姓名"
+            android:inputType="text"
+            android:paddingLeft="@dimen/fifteen"
+            android:paddingRight="@dimen/fifteen" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/fifty"
+            android:layout_marginTop="@dimen/two"
+            android:background="@android:color/white"
+            android:hint="手机号码"
+            android:inputType="number"
+            android:paddingLeft="@dimen/fifteen"
+            android:paddingRight="@dimen/fifteen" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/fifty"
+            android:layout_marginTop="@dimen/two"
+            android:background="@android:color/white"
+            android:hint="邮政编码"
+            android:inputType="number"
+            android:paddingLeft="@dimen/fifteen"
+            android:paddingRight="@dimen/fifteen" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/fifty"
+            android:layout_marginTop="@dimen/two"
+            android:background="@color/white"
+            android:paddingLeft="@dimen/fifteen"
+            android:paddingRight="@dimen/fifteen"
+            android:textSize="@dimen/t_twenty"
+            android:paddingTop="@dimen/eleven"
+            android:textColor="@color/theme_blacker"
+            android:text="省、市、区" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_row"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fifty"
+        android:layout_marginTop="@dimen/two"
+        android:background="@android:color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/ten"
+        android:paddingRight="@dimen/ten">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="@dimen/seven"
+            android:text="街道"
+            android:textColor="@color/theme_blacker"
+            android:textSize="@dimen/t_twenty" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/app_name"
+            android:src="@mipmap/qianhuijiantou" />
+    </LinearLayout>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/one_hundred"
+        android:layout_marginTop="@dimen/two"
+        android:background="@android:color/white"
+        android:hint="详细地址"
+        android:lines="3"
+        android:inputType="text"
+        android:paddingLeft="@dimen/fifteen"
+        android:paddingRight="@dimen/fifteen" />
+
+    <TextView
+        android:id="@+id/tv_sure"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/forty_five"
+        android:layout_marginLeft="@dimen/twenty"
+        android:layout_marginRight="@dimen/twenty"
+        android:layout_marginTop="@dimen/thirty"
+        android:text="确定"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/t_sixteen"
+        android:background="@drawable/radius_solid_theme"
+        android:gravity="center" />
+</LinearLayout>

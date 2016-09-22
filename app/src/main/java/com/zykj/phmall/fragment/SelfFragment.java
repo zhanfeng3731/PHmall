@@ -6,6 +6,16 @@ import android.widget.TextView;
 import com.bigkoo.convenientbanner.ConvenientBanner;
 import com.bigkoo.convenientbanner.holder.CBViewHolderCreator;
 import com.zykj.phmall.R;
+import com.zykj.phmall.activity.AccountActivity;
+import com.zykj.phmall.activity.AddressManageActivity;
+import com.zykj.phmall.activity.CashActivity;
+import com.zykj.phmall.activity.DepositActivity;
+import com.zykj.phmall.activity.MyInfoActivity;
+import com.zykj.phmall.activity.MyPropertyActivity;
+import com.zykj.phmall.activity.MyStoresActivity;
+import com.zykj.phmall.activity.PersonalSettingActivity;
+import com.zykj.phmall.activity.RechargeActivity;
+import com.zykj.phmall.activity.WithdrawActivity;
 import com.zykj.phmall.adapter.BannerHolderView;
 import com.zykj.phmall.adapter.CommonAdapter;
 import com.zykj.phmall.adapter.ViewHolder;
@@ -19,6 +29,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import butterknife.Bind;
+import butterknife.OnClick;
 
 /**
  * Created by csh
@@ -91,5 +102,40 @@ public class SelfFragment extends BaseFragment<HomePresenter> {
     @Override
     public HomePresenter createPresenter() {
         return null;
+    }
+
+    @OnClick({R.id.ll_myposter, R.id.ll_myplan, R.id.ll_mysetting, R.id.ll_myaddress, R.id.ll_mymoney,
+            R.id.ll_myshop, R.id.ll_myasset, R.id.iv_back, R.id.ll_myinfo})
+    protected void message(View v) {
+        switch (v.getId()) {
+            case R.id.ll_myposter:
+                startActivity(PersonalSettingActivity.class);
+                break;
+            case R.id.ll_myplan:
+                startActivity(PersonalSettingActivity.class);
+                break;
+            case R.id.ll_mysetting:
+                startActivity(PersonalSettingActivity.class);
+                break;
+            case R.id.ll_myaddress:
+                startActivity(AddressManageActivity.class);
+                break;
+            case R.id.ll_mymoney:
+                startActivity(CashActivity.class);
+                break;
+            case R.id.ll_myshop:
+                startActivity(MyStoresActivity.class);
+                break;
+            case R.id.ll_myasset:
+                startActivity(MyPropertyActivity.class);
+                break;
+            case R.id.iv_back:
+                startActivity(MyInfoActivity.class);
+                break;
+            case R.id.ll_myinfo:
+                startActivity(MyInfoActivity.class);
+                break;
+        }
+
     }
 }

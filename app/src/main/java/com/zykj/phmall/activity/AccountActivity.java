@@ -21,7 +21,7 @@ public class AccountActivity extends ToolBarActivity<AccountPresenter>{
 
     @Override
     protected String provideTitle() {
-        return null;
+        return "账户余额";
     }
 
     @Override

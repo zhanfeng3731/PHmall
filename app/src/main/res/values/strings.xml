@@ -121,4 +121,43 @@
     <string name="m_score">我的惠积分</string>
     <string name="m_exchange">兑换</string>
     <string name="m_change">惠积分变现</string>
+    <!-- 个人设置 -->
+    <string name="per_password">登陆密码</string>
+    <string name="per_verity">手机验证</string>
+    <string name="per_pays">支付密码</string>
+    <string name="per_ret">用户反馈</string>
+    <string name="per_exition">退出</string>
+    <!-- 收货地址 -->
+    <string name="add_mrsl">李大力</string>
+    <string name="add_myaddress">山东省临沂市兰山区沂堂镇临西十三路与聚财七路交汇50米路南</string>
+    <!-- 我要开店 -->
+    <string name="my_daili">推广代理商ID</string>
+    <string name="my_storeinfo">店铺及联系人信息</string>
+    <string name="my_storename">店铺名称</string>
+    <string name="my_imstorename">请输入店铺名称</string>
+    <string name="my_ataddress">所在地</string>
+    <string name="my_deaddress">详细地址</string>
+    <string name="my_imdeaddress">请输入详细地址</string>
+    <string name="my_name">联系人姓名</string>
+    <string name="my_imname">请输入联系人姓名</string>
+    <string name="my_phone">联系人电话</string>
+    <string name="my_imphones">请输入联系人电话</string>
+    <string name="my_email">电子邮箱</string>
+    <string name="my_imemail">请输入电子邮箱</string>
+    <string name="my_status">身份信息</string>
+    <string name="my_relname">姓名</string>
+    <string name="my_imrelname">请输入姓名</string>
+    <string name="my_idnumber">身份证号</string>
+    <string name="my_imidnumber">请输入身份证号</string>
+    <string name="my_detailaddress">详细地址</string>
+    <string name="my_imdetailaddress">请输入详细地址</string>
+    <string name="my_picture">手持身份证照片</string>
+    <string name="my_select">选择文件</string>
+    <string name="my_jiesuan">结算(支付宝)账号信息</string>
+    <string name="my_alipayname">支付宝姓名</string>
+    <string name="my_alipayid">支付宝账号</string>
+    <string name="my_imalipayid">请输入账号</string>
+    <string name="my_next">下一步</string>
+
+
 </resources>

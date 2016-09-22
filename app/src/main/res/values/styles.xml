@@ -37,5 +37,4 @@
         <item name="android:textSize">@dimen/t_sixteen</item>
         <item name="android:textColor">@color/theme_black</item>
     </style>
-
 </resources>
