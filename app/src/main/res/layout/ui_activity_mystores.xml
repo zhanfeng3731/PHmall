@@ -1,0 +1,656 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme_backgrond"
+    android:orientation="vertical">
+
+    <include layout="@layout/ui_view_toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/fifty"
+                android:orientation="horizontal"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/my_daili"
+                    android:textSize="@dimen/t_fifteen"
+                    android:textColor="@color/theme_blacker"
+                    android:layout_marginLeft="@dimen/ten"
+                    android:layout_gravity="center_vertical" />
+
+                <TextView
+                    android:id="@+id/tv_agentid"
+                    android:layout_width="@dimen/one_hundred_fifty"
+                    android:layout_height="@dimen/thirty"
+                    android:layout_marginLeft="@dimen/twenty_five"
+                    android:background="@color/theme_hint"
+                    android:layout_gravity="center_vertical"
+                    android:text=""
+                    android:textSize="@dimen/t_fifteen"
+                    android:gravity="center"
+                    android:textColor="@color/theme_red" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/fifty"
+                android:layout_marginTop="@dimen/two"
+                android:background="@color/theme_backgrond"
+                android:paddingLeft="@dimen/ten"
+                android:paddingRight="@dimen/ten">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/my_storeinfo"
+                    android:textSize="@dimen/t_twenty"
+                    android:textColor="@color/theme_red"
+                    android:textStyle="bold"
+                    android:layout_centerVertical="true" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_storename"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/fifty"
+                android:layout_marginTop="@dimen/two"
+                android:background="@android:color/white"
+                android:paddingLeft="@dimen/ten"
+                android:paddingRight="@dimen/ten">
+
+                <TextView
+                    android:id="@+id/tv_star"
+                    android:layout_width="@dimen/five"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/five"
+                    android:text="*"
+                    android:textColor="@color/theme_match" />
+
+                <TextView
+                    android:id="@+id/tv_storename"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/tv_star"
+                    android:paddingLeft="@dimen/ten"
+                    android:text="@string/my_storename"
+                    android:textColor="@color/theme_blacker"
+                    android:textSize="@dimen/t_eighteen" />
+
+                <EditText
+                    android:id="@+id/et_realname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/fifteen"
+                    android:layout_marginRight="@dimen/ten"
+                    android:layout_toRightOf="@id/tv_storename"
+                    android:background="@color/white"
+                    android:gravity="right"
+                    android:hint="@string/my_imstorename"
+                    android:textSize="@dimen/t_fifteen"
+                    android:inputType="text" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_location"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/fifty"
+                android:layout_marginTop="@dimen/two"
+                android:background="@android:color/white"
+                android:paddingLeft="@dimen/ten"
+                android:paddingRight="@dimen/ten"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_star00"
+                    android:layout_width="@dimen/five"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/five"
+                    android:text="*"
+                    android:textColor="@color/theme_match" />
+
+                <TextView
+                    android:id="@+id/tv_managekinds"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:paddingLeft="@dimen/ten"
+                    android:text="@string/my_ataddress"
+                    android:textStyle="bold"
+                    android:textColor="@color/theme_blacker"
+                    android:textSize="@dimen/t_eighteen" />
+
+                <Spinner
+                    android:id="@+id/spn1"
+                    android:layout_width="@dimen/seventy"
+                    android:layout_height="@dimen/thirty_five"
+                    android:layout_marginLeft="@dimen/ten"
+                    android:layout_gravity="center_vertical" />
+
+                <Spinner
+                    android:id="@+id/spn2"
+                    android:layout_width="@dimen/seventy"
+                    android:layout_height="@dimen/thirty_five"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/ten" />
+
+                <Spinner
+                    android:id="@+id/spn3"
+                    android:layout_width="@dimen/seventy"
+                    android:layout_height="@dimen/thirty_five"
+                    android:layout_marginLeft="@dimen/ten"
+                    android:layout_gravity="center_vertical" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_address"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/fifty"
+                android:layout_marginTop="@dimen/two"
+                android:background="@android:color/white"
+                android:paddingLeft="@dimen/ten"
+                android:paddingRight="@dimen/ten">
+
+                <TextView
+                    android:id="@+id/tv_star1"
+                    android:layout_width="@dimen/five"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/five"
+                    android:text="*"
+                    android:textColor="@color/theme_match" />
+
+                <TextView
+                    android:id="@+id/tv_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/tv_star1"
+                    android:paddingLeft="@dimen/ten"
+                    android:text="@string/my_deaddress"
+                    android:textColor="@color/theme_blacker"
+                    android:textSize="@dimen/t_eighteen" />
+
+                <EditText
+                    android:id="@+id/et_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/fifteen"
+                    android:layout_marginRight="@dimen/ten"
+                    android:layout_toRightOf="@id/tv_address"
+                    android:background="@color/white"
+                    android:gravity="right"
+                    android:textSize="@dimen/t_fifteen"
+                    android:hint="@string/my_imdeaddress"
+                    android:inputType="text" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_linkmanname"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/fifty"
+                android:layout_marginTop="@dimen/two"
+                android:background="@android:color/white"
+                android:paddingLeft="@dimen/ten"
+                android:paddingRight="@dimen/ten">
+
+                <TextView
+                    android:id="@+id/tv_star2"
+                    android:layout_width="@dimen/five"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/five"
+                    android:text="*"
+                    android:textColor="@color/theme_match" />
+
+                <TextView
+                    android:id="@+id/tv_linkmanname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/tv_star2"
+                    android:paddingLeft="@dimen/ten"
+                    android:text="@string/my_name"
+                    android:textColor="@color/theme_blacker"
+                    android:textSize="@dimen/t_eighteen" />
+
+                <EditText
+                    android:id="@+id/et_linkmanname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/fifteen"
+                    android:layout_marginRight="@dimen/ten"
+                    android:layout_toRightOf="@id/tv_linkmanname"
+                    android:background="@color/white"
+                    android:gravity="right"
+                    android:textSize="@dimen/t_fifteen"
+                    android:hint="@string/my_imname"
+                    android:inputType="text" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_linkmanphone"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/fifty"
+                android:layout_marginTop="@dimen/two"
+                android:background="@android:color/white"
+                android:paddingLeft="@dimen/ten"
+                android:paddingRight="@dimen/ten">
+
+                <TextView
+                    android:id="@+id/tv_star3"
+                    android:layout_width="@dimen/five"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/five"
+                    android:text="*"
+                    android:textColor="@color/theme_match" />
+
+                <TextView
+                    android:id="@+id/tv_linkmanphone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/tv_star3"
+                    android:paddingLeft="@dimen/ten"
+                    android:text="@string/my_phone"
+                    android:textColor="@color/theme_blacker"
+                    android:textSize="@dimen/t_eighteen" />
+
+                <EditText
+                    android:id="@+id/et_linkmanphone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/fifteen"
+                    android:layout_marginRight="@dimen/ten"
+                    android:layout_toRightOf="@id/tv_linkmanphone"
+                    android:background="@color/white"
+                    android:gravity="right"
+                    android:hint="@string/my_imphones"
+                    android:textSize="@dimen/t_fifteen"
+                    android:inputType="number" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_emailaddress"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/fifty"
+                android:layout_marginTop="@dimen/two"
+                android:background="@android:color/white"
+                android:paddingLeft="@dimen/ten"
+                android:paddingRight="@dimen/ten">
+
+                <TextView
+                    android:id="@+id/tv_star4"
+                    android:layout_width="@dimen/five"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/five"
+                    android:text="*"
+                    android:textColor="@color/theme_match" />
+
+                <TextView
+                    android:id="@+id/tv_emailaddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/tv_star4"
+                    android:paddingLeft="@dimen/ten"
+                    android:text="@string/my_email"
+                    android:textColor="@color/theme_blacker"
+                    android:textSize="@dimen/t_eighteen" />
+
+                <EditText
+                    android:id="@+id/et_emailaddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/fifteen"
+                    android:layout_marginRight="@dimen/ten"
+                    android:layout_toRightOf="@id/tv_emailaddress"
+                    android:background="@color/white"
+                    android:gravity="right"
+                    android:textSize="@dimen/t_fifteen"
+                    android:hint="@string/my_imemail"
+                    android:inputType="text" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/fifty"
+                android:layout_marginTop="@dimen/two"
+                android:background="@color/theme_backgrond"
+                android:paddingLeft="@dimen/ten"
+                android:paddingRight="@dimen/ten">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/my_status"
+                    android:textSize="@dimen/t_twenty"
+                    android:textColor="@color/theme_red"
+                    android:textStyle="bold"
+                    android:layout_centerVertical="true" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_name"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/fifty"
+                android:layout_marginTop="@dimen/two"
+                android:background="@android:color/white"
+                android:paddingLeft="@dimen/ten"
+                android:paddingRight="@dimen/ten">
+
+                <TextView
+                    android:id="@+id/tv_star5"
+                    android:layout_width="@dimen/five"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/five"
+                    android:text="*"
+                    android:textColor="@color/theme_match" />
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/tv_star5"
+                    android:paddingLeft="@dimen/ten"
+                    android:text="@string/my_relname"
+                    android:textColor="@color/theme_blacker"
+                    android:textSize="@dimen/t_eighteen" />
+
+                <EditText
+                    android:id="@+id/et_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/fifteen"
+                    android:layout_marginRight="@dimen/ten"
+                    android:layout_toRightOf="@id/tv_name"
+                    android:background="@color/white"
+                    android:gravity="right"
+                    android:textSize="@dimen/t_fifteen"
+                    android:hint="@string/my_imrelname"
+                    android:inputType="text" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_idnumber"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/fifty"
+                android:layout_marginTop="@dimen/two"
+                android:background="@android:color/white"
+                android:paddingLeft="@dimen/ten"
+                android:paddingRight="@dimen/ten">
+
+                <TextView
+                    android:id="@+id/tv_star6"
+                    android:layout_width="@dimen/five"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/five"
+                    android:text="*"
+                    android:textColor="@color/theme_match" />
+
+                <TextView
+                    android:id="@+id/tv_idnumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/tv_star6"
+                    android:paddingLeft="@dimen/ten"
+                    android:text="@string/my_idnumber"
+                    android:textColor="@color/theme_blacker"
+                    android:textSize="@dimen/t_eighteen" />
+
+                <EditText
+                    android:id="@+id/et_idnumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/fifteen"
+                    android:layout_marginRight="@dimen/ten"
+                    android:layout_toRightOf="@id/tv_idnumber"
+                    android:background="@color/white"
+                    android:gravity="right"
+                    android:hint="@string/my_imidnumber"
+                    android:textSize="@dimen/t_fifteen"
+                    android:inputType="number" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_myaddress"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/fifty"
+                android:layout_marginTop="@dimen/two"
+                android:background="@android:color/white"
+                android:paddingLeft="@dimen/ten"
+                android:paddingRight="@dimen/ten">
+
+                <TextView
+                    android:id="@+id/tv_star7"
+                    android:layout_width="@dimen/five"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/five"
+                    android:text="*"
+                    android:textColor="@color/theme_match" />
+
+                <TextView
+                    android:id="@+id/tv_myaddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/tv_star7"
+                    android:paddingLeft="@dimen/ten"
+                    android:text="@string/my_detailaddress"
+                    android:textColor="@color/theme_blacker"
+                    android:textSize="@dimen/t_eighteen" />
+
+                <EditText
+                    android:id="@+id/et_myaddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/fifteen"
+                    android:layout_marginRight="@dimen/ten"
+                    android:layout_toRightOf="@id/tv_myaddress"
+                    android:background="@color/white"
+                    android:gravity="right"
+                    android:hint="@string/my_imdetailaddress"
+                    android:textSize="@dimen/t_fifteen"
+                    android:inputType="text" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_mypicture"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/one_hundred_thirty"
+                android:layout_marginTop="@dimen/two"
+                android:background="@android:color/white"
+                android:paddingLeft="@dimen/ten"
+                android:paddingRight="@dimen/ten">
+
+                <TextView
+                    android:id="@+id/tv_star8"
+                    android:layout_width="@dimen/five"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/five"
+                    android:layout_marginTop="@dimen/fifteen"
+                    android:text="*"
+                    android:textColor="@color/theme_match" />
+
+                <TextView
+                    android:id="@+id/tv_mypicture"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/tv_star8"
+                    android:layout_toRightOf="@id/tv_star8"
+                    android:paddingLeft="@dimen/ten"
+                    android:text="@string/my_picture"
+                    android:textColor="@color/theme_blacker"
+                    android:textSize="@dimen/t_eighteen" />
+
+                <Button
+                    android:id="@+id/btn_select"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_mypicture"
+                    android:layout_marginLeft="@dimen/thirty"
+                    android:layout_marginTop="@dimen/five"
+                    android:textSize="@dimen/t_fifteen"
+                    android:text="@string/my_select" />
+
+                <ImageView
+                    android:id="@+id/iv_mypicture"
+                    android:layout_width="@dimen/one_hundred"
+                    android:layout_height="@dimen/two_hundred"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/ten"
+                    android:layout_marginTop="@dimen/ten" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/fifty"
+                android:layout_marginTop="@dimen/two"
+                android:background="@color/theme_backgrond"
+                android:paddingLeft="@dimen/ten"
+                android:paddingRight="@dimen/ten">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/my_jiesuan"
+                    android:textSize="@dimen/t_twenty"
+                    android:textColor="@color/theme_red"
+                    android:textStyle="bold"
+                    android:layout_centerVertical="true" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_alipayname"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/fifty"
+                android:layout_marginTop="@dimen/two"
+                android:background="@android:color/white"
+                android:paddingLeft="@dimen/ten"
+                android:paddingRight="@dimen/ten">
+
+                <TextView
+                    android:id="@+id/tv_star9"
+                    android:layout_width="@dimen/five"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/five"
+                    android:text="*"
+                    android:textColor="@color/theme_match" />
+
+                <TextView
+                    android:id="@+id/tv_alipayname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/tv_star9"
+                    android:paddingLeft="@dimen/ten"
+                    android:text="@string/my_alipayname"
+                    android:textColor="@color/theme_blacker"
+                    android:textSize="@dimen/t_eighteen" />
+
+                <EditText
+                    android:id="@+id/et_alipayname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/fifteen"
+                    android:layout_marginRight="@dimen/ten"
+                    android:layout_toRightOf="@id/tv_alipayname"
+                    android:background="@color/white"
+                    android:gravity="right"
+                    android:hint="@string/my_imrelname"
+                    android:textSize="@dimen/t_fifteen"
+                    android:inputType="text" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_alipayid"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/fifty"
+                android:layout_marginTop="@dimen/two"
+                android:background="@android:color/white"
+                android:paddingLeft="@dimen/ten"
+                android:paddingRight="@dimen/ten">
+
+                <TextView
+                    android:id="@+id/tv_star10"
+                    android:layout_width="@dimen/five"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/five"
+                    android:text="*"
+                    android:textColor="@color/theme_match" />
+
+                <TextView
+                    android:id="@+id/tv_alipayid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/tv_star10"
+                    android:paddingLeft="@dimen/ten"
+                    android:text="@string/my_alipayid"
+                    android:textColor="@color/theme_blacker"
+                    android:textSize="@dimen/t_eighteen" />
+
+                <EditText
+                    android:id="@+id/et_alipayid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/fifteen"
+                    android:layout_marginRight="@dimen/ten"
+                    android:layout_toRightOf="@id/tv_alipayid"
+                    android:background="@color/white"
+                    android:gravity="right"
+                    android:hint="@string/my_imalipayid"
+                    android:textSize="@dimen/t_fifteen"
+                    android:inputType="number" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_next"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/forty_five"
+                android:layout_marginLeft="@dimen/twenty"
+                android:layout_marginRight="@dimen/twenty"
+                android:layout_marginTop="@dimen/thirty"
+                android:layout_marginBottom="@dimen/ten"
+                android:text="@string/my_next"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/t_sixteen"
+                android:background="@drawable/radius_solid_theme"
+                android:gravity="center" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
