@@ -16,6 +16,7 @@ import com.zykj.phmall.R;
 import com.zykj.phmall.activity.AccountActivity;
 import com.zykj.phmall.activity.AnnounceActivity;
 import com.zykj.phmall.activity.CashActivity;
+import com.zykj.phmall.activity.MainActivity;
 import com.zykj.phmall.activity.ManagerActivity;
 import com.zykj.phmall.activity.MemberActivity;
 import com.zykj.phmall.activity.MessageActivity;
@@ -46,6 +47,12 @@ public class HomeFragment extends BaseFragment<HomePresenter> implements OnItemC
     GridView gd_data;
     @Bind(R.id.cb_banner)
     ConvenientBanner<String> cb_banner;//顶部广告栏控件
+    public static MainActivity Activity;
+    public static HomeFragment newInstance(MainActivity mianActivity) {
+        Activity = mianActivity;
+        return new HomeFragment();
+    }
+
     private String[] images = {
             "http://img2.imgtn.bdimg.com/it/u=3093785514,1341050958&fm=21&gp=0.jpg",
             "http://img2.3lian.com/2014/f2/37/d/40.jpg",
@@ -147,7 +154,7 @@ public class HomeFragment extends BaseFragment<HomePresenter> implements OnItemC
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         if(position == 6){
-
+            Activity.clickFragment();
         }else{
             startActivity(activitys[position]);
         }
