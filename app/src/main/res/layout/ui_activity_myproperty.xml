@@ -43,34 +43,6 @@
             android:background="@color/theme_backgrond" />
 
         <LinearLayout
-            android:id="@+id/ll_cardbalance"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="vertical">
-
-            <ImageView
-                android:layout_width="@dimen/fifty"
-                android:layout_height="@dimen/fifty"
-                android:src="@mipmap/holding"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="@dimen/twenty_five" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="充值卡余额"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="@dimen/fifteen"
-                android:textSize="@dimen/t_fifteen" />
-        </LinearLayout>
-
-        <TextView
-            android:layout_width="@dimen/two"
-            android:layout_height="match_parent"
-            android:background="@color/theme_backgrond" />
-
-        <LinearLayout
             android:id="@+id/ll_puscore"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -93,22 +65,13 @@
                 android:textSize="@dimen/t_fifteen" />
         </LinearLayout>
 
-    </LinearLayout>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/two"
-        android:background="@color/theme_backgrond" />
-
-    <LinearLayout
-        android:id="@+id/ll_huiscore"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/one_hundred_thirty"
-        android:orientation="horizontal"
-        android:background="@color/white"
-        android:weightSum="3">
+        <TextView
+            android:layout_width="@dimen/two"
+            android:layout_height="match_parent"
+            android:background="@color/theme_backgrond" />
 
         <LinearLayout
+            android:id="@+id/ll_huiscore"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -130,10 +93,19 @@
                 android:textSize="@dimen/t_fifteen" />
         </LinearLayout>
 
-        <TextView
-            android:layout_width="@dimen/two"
-            android:layout_height="match_parent"
-            android:background="@color/theme_backgrond" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/two"
+        android:background="@color/theme_backgrond" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/one_hundred_thirty"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:weightSum="3">
 
         <LinearLayout
             android:id="@+id/ll_repertoryscore"
@@ -186,40 +158,6 @@
                 android:textSize="@dimen/t_fifteen" />
         </LinearLayout>
 
-    </LinearLayout>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/two"
-        android:background="@color/theme_backgrond" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/one_hundred_thirty"
-        android:orientation="horizontal"
-        android:background="@color/white"
-        android:weightSum="3">
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="vertical">
-
-            <ImageView
-                android:layout_width="@dimen/fifty"
-                android:layout_height="@dimen/fifty"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="@dimen/twenty_five" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="@dimen/fifteen"
-                android:textSize="@dimen/t_fifteen" />
-        </LinearLayout>
-
         <TextView
             android:layout_width="@dimen/two"
             android:layout_height="match_parent"
@@ -248,30 +186,10 @@
                 android:textSize="@dimen/t_fifteen" />
         </LinearLayout>
 
-        <TextView
-            android:layout_width="@dimen/two"
-            android:layout_height="match_parent"
-            android:background="@color/theme_backgrond" />
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="vertical">
-
-            <ImageView
-                android:layout_width="@dimen/fifty"
-                android:layout_height="@dimen/fifty"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="@dimen/twenty_five" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="@dimen/fifteen"
-                android:textSize="@dimen/t_fifteen" />
-        </LinearLayout>
     </LinearLayout>
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/two"
+        android:background="@color/theme_backgrond" />
 </LinearLayout>

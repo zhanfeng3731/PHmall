@@ -1,12 +1,12 @@
 package com.zykj.phmall.adapter;
 
-import java.util.List;
-
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+
+import java.util.List;
 
 public abstract class CommonAdapter<T> extends BaseAdapter{
 	
@@ -45,7 +45,5 @@ public abstract class CommonAdapter<T> extends BaseAdapter{
 		
 		return holder.getConvertView();
 	}
-
 	public abstract void convert(ViewHolder holder, T t);
-
 }

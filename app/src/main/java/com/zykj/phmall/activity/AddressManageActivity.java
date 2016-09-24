@@ -1,15 +1,11 @@
 package com.zykj.phmall.activity;
 
-import android.text.Html;
 import android.view.View;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.zykj.phmall.R;
 import com.zykj.phmall.base.ToolBarActivity;
 import com.zykj.phmall.presenter.AddressManagePresenter;
 
-import butterknife.Bind;
 import butterknife.OnClick;
 
 /**
@@ -41,14 +37,12 @@ public class AddressManageActivity extends ToolBarActivity<AddressManagePresente
         return null;
     }
 
-
     @OnClick({R.id.ll_addnewaddress})
     protected void message(View v) {
         switch (v.getId()) {
             case R.id.ll_addnewaddress:
                 startActivity(AddSiteActivity.class);
                 break;
-
         }
     }
 }

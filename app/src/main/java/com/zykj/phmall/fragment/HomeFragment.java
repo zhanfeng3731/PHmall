@@ -9,6 +9,7 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.GridView;
 import android.widget.TextView;
+
 import com.bigkoo.convenientbanner.ConvenientBanner;
 import com.bigkoo.convenientbanner.holder.CBViewHolderCreator;
 import com.xys.libzxing.zxing.activity.CaptureActivity;
@@ -30,8 +31,10 @@ import com.zykj.phmall.adapter.ViewHolder;
 import com.zykj.phmall.base.BaseFragment;
 import com.zykj.phmall.presenter.HomePresenter;
 import com.zykj.phmall.utils.StringUtil;
+
 import java.util.Arrays;
 import java.util.List;
+
 import butterknife.Bind;
 import butterknife.OnClick;
 
@@ -106,7 +109,7 @@ public class HomeFragment extends BaseFragment<HomePresenter> implements OnItemC
         gd_data.setOnItemClickListener(this);
     }
 
-    @OnClick({R.id.tv_sign,R.id.ll_camera,R.id.ll_spread,R.id.ll_message,R.id.ll_shake,R.id.ll_message1,R.id.ll_message2})
+    @OnClick({R.id.tv_sign, R.id.ll_camera, R.id.ll_spread, R.id.ll_message, R.id.ll_message1, R.id.ll_message2})
     protected void door(View view){
         switch (view.getId()){
             case R.id.tv_sign:
@@ -120,8 +123,6 @@ public class HomeFragment extends BaseFragment<HomePresenter> implements OnItemC
                 break;
             case R.id.ll_message:
                 startActivity(MessageListActivity.class);
-                break;
-            case R.id.ll_shake:
                 break;
             case R.id.ll_message1:
                 startActivity(NewsActivity.class);

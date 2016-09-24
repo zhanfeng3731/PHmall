@@ -13,6 +13,8 @@
     <color name="theme_alph">#38000000</color>
     <color name="theme_blacker">#000000</color>
     <color name="theme_red">#FF0000</color>
+    <color name="theme_green">#00FF00</color>
+
     <!-- 常用颜色 -->
     <color name="refresh_progress_3">#1e1d22</color>
     <color name="refresh_progress_2">#00b0ff</color>

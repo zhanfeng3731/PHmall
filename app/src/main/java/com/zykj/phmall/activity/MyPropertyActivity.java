@@ -27,14 +27,11 @@ public class MyPropertyActivity extends ToolBarActivity<MyPropertyPresenter> {
         return null;
     }
 
-    @OnClick({R.id.ll_accountbalance, R.id.ll_cardbalance, R.id.ll_puscore, R.id.ll_huiscore, R.id.ll_repertoryscore, R.id.ll_voucher, R.id.ll_wallet})
+    @OnClick({R.id.ll_accountbalance, R.id.ll_puscore, R.id.ll_huiscore, R.id.ll_repertoryscore, R.id.ll_voucher, R.id.ll_wallet})
     protected void message(View v) {
         switch (v.getId()) {
             case R.id.ll_accountbalance:
                 startActivity(AccountActivity.class);
-                break;
-            case R.id.ll_cardbalance:
-                startActivity(PersonalSettingActivity.class);
                 break;
             case R.id.ll_puscore:
                 startActivity(PuScoreActivity.class);
@@ -46,12 +43,11 @@ public class MyPropertyActivity extends ToolBarActivity<MyPropertyPresenter> {
                 startActivity(CashActivity.class);
                 break;
             case R.id.ll_voucher:
-                startActivity(MyStoresActivity.class);
+                startActivity(CardBalanceActivity.class);
                 break;
             case R.id.ll_wallet:
                 startActivity(MyPropertyActivity.class);
                 break;
         }
-
     }
 }
