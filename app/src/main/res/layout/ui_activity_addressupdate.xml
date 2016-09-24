@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme_backgrond"
+    android:orientation="vertical">
+
+    <include layout="@layout/ui_view_toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/fifty"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="@dimen/one_hundred"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:gravity="center"
+                android:text="收货人"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/et_myname"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/two"
+                android:background="@android:color/white"
+                android:inputType="text"
+                android:paddingLeft="@dimen/fifteen"
+                android:paddingRight="@dimen/fifteen"
+                android:text="姓名"
+                android:textColor="@color/theme_blacker" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/fifty"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="@dimen/one_hundred"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:layout_marginTop="@dimen/two"
+                android:gravity="center"
+                android:text="手机号码"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/et_myphone"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/fifty"
+                android:layout_marginTop="@dimen/two"
+                android:background="@android:color/white"
+                android:inputType="number"
+                android:paddingLeft="@dimen/fifteen"
+                android:paddingRight="@dimen/fifteen"
+                android:text="15077885566" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/fifty"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="@dimen/one_hundred"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/two"
+                android:text="邮政编码"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/et_mypostalcode"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/fifty"
+                android:layout_marginTop="@dimen/two"
+                android:background="@android:color/white"
+                android:inputType="number"
+                android:paddingLeft="@dimen/fifteen"
+                android:paddingRight="@dimen/fifteen"
+                android:text="276000" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/fifty"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="@dimen/one_hundred"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/two"
+                android:text="所在地"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/et_myaddresspct"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/fifty"
+                android:layout_marginTop="@dimen/two"
+                android:background="@android:color/white"
+                android:inputType="number"
+                android:paddingLeft="@dimen/fifteen"
+                android:paddingRight="@dimen/fifteen"
+                android:text="山东省临沂市兰山区" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/fifty"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="@dimen/one_hundred"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/two"
+                android:text="街道"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/et_myaddressroad"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/fifty"
+                android:layout_marginTop="@dimen/two"
+                android:background="@android:color/white"
+                android:inputType="number"
+                android:paddingLeft="@dimen/fifteen"
+                android:paddingRight="@dimen/fifteen"
+                android:text="银雀山街道" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/fifty"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="@dimen/one_hundred"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/two"
+                android:background="@color/white"
+                android:gravity="center"
+                android:text="详细地址"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/et_myaddressdetail"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/fifty"
+                android:layout_marginTop="@dimen/two"
+                android:background="@android:color/white"
+                android:inputType="number"
+                android:lines="1"
+                android:paddingLeft="@dimen/fifteen"
+                android:paddingRight="@dimen/fifteen"
+                android:text="山东省临沂市兰山区红旗路与银雀山路交汇处50米路北" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_delect"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fifty"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/thirty">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:paddingLeft="@dimen/fifteen"
+            android:text="删除收货地址"
+            android:textColor="@color/red"
+            android:gravity="center_vertical"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+</LinearLayout>

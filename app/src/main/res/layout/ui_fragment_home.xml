@@ -20,16 +20,6 @@
             android:textSize="@dimen/t_eighteen"
             android:textColor="@android:color/white"
             android:text="@string/app_register"/>
-        <TextView
-            android:id="@+id/tv_sign"
-            android:layout_width="@dimen/fifty"
-            android:layout_height="match_parent"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:textSize="@dimen/t_fourteen"
-            android:textColor="@android:color/white"
-            android:gravity="center"
-            android:text="@string/sign"/>
     </RelativeLayout>
 
     <LinearLayout
@@ -96,7 +86,7 @@
                 android:textColor="@android:color/white"/>
         </LinearLayout>
         <LinearLayout
-            android:id="@+id/ll_shake"
+            android:id="@+id/tv_sign"
             android:layout_width="0.0dp"
             android:layout_height="fill_parent"
             android:layout_weight="1"
@@ -106,12 +96,12 @@
                 android:layout_width="45dp"
                 android:layout_height="40dp"
                 android:contentDescription="@string/app_name"
-                android:background="@mipmap/yaoyiyao" />
+                android:background="@mipmap/qiandaox" />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/twenty_five"
                 android:gravity="center"
-                android:text="@string/task4"
+                android:text="签到"
                 android:textColor="@android:color/white"/>
         </LinearLayout>
     </LinearLayout>
