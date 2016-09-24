@@ -15,16 +15,15 @@ public class PreferenceUtils {
     private static SharedPreferences mSharedPreference;
     private SharedPreferences.Editor mEditor;
 
-    private static final String LOGIN="login";
-    private static final String USERID="userid";
-    private static final String USERNAME="username";
-    private static final String PASSWORD="password";
-    private static final String AVATAR="avatar";
-    private static final String REALNAME="realname";
-//    private static final String MONEY="money";
-//    private static final String INTEGRAL="integral";
-    private static final String VERSION="version";
-    private static final String IS_INTRO="is_intro";
+    private static final String LOGIN="login";//自动登录
+    private static final String USERID="userid";//会员ID
+    private static final String USERNAME="username";//登录账号
+    private static final String PASSWORD="password";//登录密码
+    private static final String AVATAR="avatar";//会员头像路径
+    private static final String REALNAME="realname";//真实姓名
+    private static final String KEY="key";//登陆token唯一标志
+    private static final String VERSION="version";//app版本
+    private static final String IS_INTRO="is_intro";//三张引导图
     private static final String SIGN="sign";
 	
     private PreferenceUtils(Context context){
@@ -62,15 +61,11 @@ public class PreferenceUtils {
 	public String getRealName() {
 		return mSharedPreference.getString(REALNAME, null);
 	}
-//
-//	public String getMoney() {
-//		return mSharedPreference.getString(MONEY, null);
-//	}
-//
-//	public String getIntegral() {
-//		return mSharedPreference.getString(INTEGRAL, null);
-//	}
-//
+
+	public String getKey() {
+		return mSharedPreference.getString(KEY, null);
+	}
+
 	public String getVersion() {
 		return mSharedPreference.getString(VERSION, null);
 	}
@@ -113,16 +108,11 @@ public class PreferenceUtils {
         mEditor.commit();
     }
 
-//    public void setMoney(String money){
-//        mEditor.putString(MONEY,money);
-//        mEditor.commit();
-//    }
-//
-//    public void setIntegral(String integral){
-//        mEditor.putString(INTEGRAL,integral);
-//        mEditor.commit();
-//    }
-//
+    public void setKey(String key){
+        mEditor.putString(KEY,key);
+        mEditor.commit();
+    }
+
     public void setVersion(String version){
         mEditor.putString(VERSION,version);
         mEditor.commit();

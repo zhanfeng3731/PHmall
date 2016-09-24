@@ -6,6 +6,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import com.zykj.phmall.R;
 import com.zykj.phmall.base.BaseActivity;
+import com.zykj.phmall.base.ToolBarActivity;
 import com.zykj.phmall.network.Const;
 import com.zykj.phmall.presenter.RegisterPresenter;
 import com.zykj.phmall.utils.ToolsUtils;
@@ -21,20 +22,20 @@ import cn.smssdk.SMSSDK;
  * Created date 2016/9/2.
  * Description 注册/忘记密码
  */
-public class RegisterActivity extends BaseActivity<RegisterPresenter> implements StateView {
+public class RegisterActivity extends ToolBarActivity<RegisterPresenter> implements StateView {
 
-    @Bind(R.id.tv_head)
-    TextView tv_head;
     @Bind(R.id.et_username)
-    EditText et_username;
+    EditText et_username;//手机号
     @Bind(R.id.et_password)
-    EditText et_password;
+    EditText et_password;//密码
+    @Bind(R.id.et_repassword)
+    EditText et_repassword;//确认密码
     @Bind(R.id.et_code)
-    EditText et_code;
+    EditText et_code;//验证码
     @Bind(R.id.tv_code)
-    TextView tv_code;
+    TextView tv_code;//发送验证码
     @Bind(R.id.tv_register)
-    TextView tv_register;
+    TextView tv_register;//提交
 
     private boolean flag = false;
     private int p = 0;
@@ -52,7 +53,6 @@ public class RegisterActivity extends BaseActivity<RegisterPresenter> implements
 
     @Override
     protected void initAllMembersView() {
-        tv_head.setText(provideTitle());
         tv_register.setText(p==0?"注册":"提交");
         SMSSDK.initSDK(this, Const.APPKEY, Const.APPSECRET);
         EventHandler eh=new EventHandler(){
@@ -65,10 +65,13 @@ public class RegisterActivity extends BaseActivity<RegisterPresenter> implements
                         //snb("提交验证码成功");
                         String username = et_username.getText().toString();
                         String password = et_password.getText().toString();
+                        String repassword = et_repassword.getText().toString();
                         if(getIntent().getIntExtra("p", 0)==0){
-                            presenter.register(rootView,username,password);
+                            //注册
+                            presenter.register(rootView,username,password,repassword, 0);
                         }else{
-                            presenter.register(rootView,username,password);
+                            //忘记密码
+                            presenter.register(rootView,username,password,repassword, 1);
                         }
                     }else if (event == SMSSDK.EVENT_GET_VERIFICATION_CODE){
                         //获取验证码成功
@@ -109,7 +112,8 @@ public class RegisterActivity extends BaseActivity<RegisterPresenter> implements
                 hideSoftMethod(et_username);
                 String code = et_code.getText().toString().trim();
                 String password=et_password.getText().toString().trim();
-                presenter.validDate(username, code, password);
+                String repassword=et_password.getText().toString().trim();
+                presenter.validDate(username, code, password, repassword);
                 break;
         }
     }

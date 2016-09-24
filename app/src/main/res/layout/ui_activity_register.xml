@@ -83,7 +83,8 @@
 				<EditText
 					android:id="@+id/et_password"
 					style="@style/inputTheme"
-					android:hint="@string/hint_pass" />
+					android:hint="@string/hint_pass"
+					android:inputType="textPassword" />
 			</LinearLayout>
 			<LinearLayout
 				android:layout_width="match_parent"
@@ -103,7 +104,8 @@
 				<EditText
 					android:id="@+id/et_repassword"
 					style="@style/inputTheme"
-					android:hint="@string/hint_repass" />
+					android:hint="@string/hint_repass"
+					android:inputType="textPassword"/>
 			</LinearLayout>
 			<TextView
 				android:id="@+id/tv_register"

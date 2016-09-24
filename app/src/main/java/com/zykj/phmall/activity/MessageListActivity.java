@@ -23,7 +23,7 @@ public class MessageListActivity extends SwipeRefreshActivity<MessagePresenter,M
 
     @Override
     protected String provideTitle() {
-        return getIntent().getStringExtra("title");
+        return "消息中心";
     }
 
     @Override
@@ -43,6 +43,10 @@ public class MessageListActivity extends SwipeRefreshActivity<MessagePresenter,M
 
     @Override
     public void onItemClick(View view, int position) {
-
+        if("".equals(adapter.mData.get(position).url_type)){
+            snb("余额");
+        }else{
+            snb("订单");
+        }
     }
 }

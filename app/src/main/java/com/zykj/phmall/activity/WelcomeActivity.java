@@ -8,14 +8,22 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.design.widget.Snackbar;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-
 import com.zykj.phmall.R;
 import com.zykj.phmall.base.BaseApp;
+import com.zykj.phmall.beans.ErrorBean;
+import com.zykj.phmall.beans.UserBean;
+import com.zykj.phmall.network.BaseEntityRes;
+import com.zykj.phmall.network.HttpUtils;
+import com.zykj.phmall.network.SubscriberRes;
+import com.zykj.phmall.utils.JsonUtils;
 import com.zykj.phmall.utils.NetManager;
 import com.zykj.phmall.utils.StringUtil;
+import com.zykj.phmall.utils.ToolsUtils;
+import java.util.HashMap;
 
 /**
  * Created by csh
@@ -124,37 +132,32 @@ public class WelcomeActivity extends Activity {
      * 用户登录
      */
     public void againLogin(){
-//        HashMap<String, Object> map = new HashMap<>();
-//        map.put("username", BaseApp.getModel().getUsername());
-//        map.put("password", BaseApp.getModel().getPassword());
-//        map.put("usertypeid", 1);
-//        HttpUtils.Login(new SubscriberEntity<UserBean>(view){
-//            @Override
-//            public void onSuccess(UserBean userBean) {
-//                BaseApp.getModel().setAvatar(userBean.ImagePath);//头像
-//                BaseApp.getModel().setRealName(userBean.RealName);//真实姓名
-//                BaseApp.getModel().setAddress(userBean.CompanyAddress);//真实姓名
-//                BaseApp.getModel().setSpareSecond(userBean.SpareSecond);//是否接收推送
-//                BaseApp.getModel().setSpareThird(userBean.SpareThird);//是否开启声音
-//                ToolsUtils.toast(context, userBean.Id+"");
-//                startActivityForAnim(MainActivity.class);
-//            }
-//            @Override
-//            public void onNext(BaseEntityRes<Object> res) {
-//                if (res.code != 200) {
-//                    ToolsUtils.toast(context, res.error);
-//                    startActivityForAnim(LoginActivity.class);
-//                } else {
-//                    String json = JsonUtils.serialize(res.data);
-//                    onSuccess(JsonUtils.deserialize(json, UserBean.class));
-//                }
-//            }
-//            @Override
-//            public void onError(Throwable throwable) {
-//                ToolsUtils.toast(context, "服务器繁忙");
-//                startActivityForAnim(LoginActivity.class);
-//            }
-//        }, HttpUtils.getJSONParam("Logina", map));
+        HashMap<String, Object> map = new HashMap<>();
+        map.put("username", BaseApp.getModel().getUsername());
+        map.put("password", BaseApp.getModel().getPassword());
+        map.put("client", "android");
+        HttpUtils.Login(new SubscriberRes<UserBean>(view){
+            @Override
+            public void onSuccess(UserBean userBean) {}
+            @Override
+            public void onNext(BaseEntityRes<UserBean> res) {
+                if (res.code != 200) {
+                    String json = JsonUtils.serialize(res.datas);
+                    String error = JsonUtils.deserialize(json, ErrorBean.class).error;
+                    ToolsUtils.toast(context, error);
+                    startActivityForAnim(LoginActivity.class);
+                } else {
+                    BaseApp.getModel().setKey(res.datas.key);//登陆token唯一标志
+                    ToolsUtils.toast(context, res.datas.userid);
+                    startActivityForAnim(MainActivity.class);
+                }
+            }
+            @Override
+            public void onError(Throwable throwable) {
+                ToolsUtils.toast(context, "服务器繁忙");
+                startActivityForAnim(LoginActivity.class);
+            }
+        }, map);
     }
 
     private void startActivityForAnim(Class clazz){

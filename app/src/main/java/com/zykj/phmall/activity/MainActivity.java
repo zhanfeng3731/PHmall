@@ -5,14 +5,14 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-
 import com.zykj.phmall.R;
 import com.zykj.phmall.base.BaseApp;
 import com.zykj.phmall.fragment.CartFragment;
 import com.zykj.phmall.fragment.CateFragment;
 import com.zykj.phmall.fragment.HomeFragment;
 import com.zykj.phmall.fragment.SelfFragment;
-
+import com.zykj.phmall.widget.TabButton;
+import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
@@ -22,6 +22,8 @@ public class MainActivity extends AppCompatActivity {
     private Fragment mTab03;
     private Fragment mTab04;
 
+    @Bind(R.id.rb_tab4)
+    TabButton rb_tab4;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -63,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
             case 0:
                 if (mTab01 == null)
                 {
-                    mTab01 = new HomeFragment();
+                    mTab01 = HomeFragment.newInstance(this);
                     transaction.add(R.id.fl_content, mTab01);
                 } else
                 {
@@ -133,5 +135,10 @@ public class MainActivity extends AppCompatActivity {
         super.onDestroy();
         ButterKnife.unbind(this);//解绑
         BaseApp.getInstance().finishActivity(this);
+    }
+
+    public void clickFragment(){
+        rb_tab4.setChecked(true);
+        setSelect(3);
     }
 }
