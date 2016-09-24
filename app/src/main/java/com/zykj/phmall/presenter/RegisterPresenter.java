@@ -1,5 +1,6 @@
 package com.zykj.phmall.presenter;
 
+import android.os.Looper;
 import android.view.View;
 import com.zykj.phmall.base.BasePresenter;
 import com.zykj.phmall.beans.UserBean;
@@ -34,7 +35,7 @@ public class RegisterPresenter extends BasePresenter<StateView> {
             HashMap<String, Object> map = new HashMap<>();
             map.put("mobile", username);
             map.put("password", password);
-            map.put("password", password);
+            map.put("password_confirm", password);
             map.put("client", "android");
             HttpUtils.Register(new SubscriberRes<UserBean>(rootView){
                 @Override

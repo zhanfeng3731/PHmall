@@ -1,6 +1,8 @@
 package com.zykj.phmall.activity;
 
+import android.app.Activity;
 import android.os.CountDownTimer;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -11,6 +13,8 @@ import com.zykj.phmall.network.Const;
 import com.zykj.phmall.presenter.RegisterPresenter;
 import com.zykj.phmall.utils.ToolsUtils;
 import com.zykj.phmall.view.StateView;
+
+import org.json.JSONObject;
 
 import butterknife.Bind;
 import butterknife.OnClick;
@@ -53,6 +57,7 @@ public class RegisterActivity extends ToolBarActivity<RegisterPresenter> impleme
 
     @Override
     protected void initAllMembersView() {
+        flag = true;
         tv_register.setText(p==0?"注册":"提交");
         SMSSDK.initSDK(this, Const.APPKEY, Const.APPSECRET);
         EventHandler eh=new EventHandler(){
@@ -62,17 +67,7 @@ public class RegisterActivity extends ToolBarActivity<RegisterPresenter> impleme
                     //回调完成
                     if (event == SMSSDK.EVENT_SUBMIT_VERIFICATION_CODE) {
                         //提交验证码成功
-                        //snb("提交验证码成功");
-                        String username = et_username.getText().toString();
-                        String password = et_password.getText().toString();
-                        String repassword = et_repassword.getText().toString();
-                        if(getIntent().getIntExtra("p", 0)==0){
-                            //注册
-                            presenter.register(rootView,username,password,repassword, 0);
-                        }else{
-                            //忘记密码
-                            presenter.register(rootView,username,password,repassword, 1);
-                        }
+                        updateUIPostAsyncTask();
                     }else if (event == SMSSDK.EVENT_GET_VERIFICATION_CODE){
                         //获取验证码成功
                         snb("验证码已经发送");
@@ -80,12 +75,40 @@ public class RegisterActivity extends ToolBarActivity<RegisterPresenter> impleme
                         //返回支持发送验证码的国家列表
                     }
                 }else{
-                    String message = ((Throwable)data).getMessage();
-                    snb(message);
+                    try {
+                        //根据服务器返回的网络错误，给toast提示
+                        JSONObject object = new JSONObject(((Throwable)data).getMessage());
+                        String des = object.optString("detail");//错误描述
+                        int status = object.optInt("status");//错误代码
+                        if (status > 0 && !TextUtils.isEmpty(des)) {
+                            snb(des);
+                        }
+                    } catch (Exception e) {
+                        snb("发送端新验证码失败，请稍后再试！");
+                    }
                 }
             }
         };
         SMSSDK.registerEventHandler(eh); //注册短信回调
+    }
+
+    //请求注册或者忘记密码接口
+    private void updateUIPostAsyncTask(){
+        rootView.post(new Runnable() {
+            @Override
+            public void run() {
+                String username = et_username.getText().toString();
+                String password = et_password.getText().toString();
+                String repassword = et_repassword.getText().toString();
+                if(getIntent().getIntExtra("p", 0)==0){
+                    //注册
+                    presenter.register(rootView,username,password,repassword, 0);
+                }else{
+                    //忘记密码
+                    presenter.register(rootView,username,password,repassword, 1);
+                }
+            }
+        });
     }
 
     @Override
@@ -104,15 +127,17 @@ public class RegisterActivity extends ToolBarActivity<RegisterPresenter> impleme
                 break;
             case R.id.tv_code:
                 /*获取验证码*/
-                hideSoftMethod(et_username);
-                presenter.validphone(username);
+                if(flag){
+                    hideSoftMethod(et_username);
+                    presenter.validphone(username);
+                }
                 break;
             case R.id.tv_register:
                 /*注册、忘记密码*/
                 hideSoftMethod(et_username);
                 String code = et_code.getText().toString().trim();
                 String password=et_password.getText().toString().trim();
-                String repassword=et_password.getText().toString().trim();
+                String repassword=et_repassword.getText().toString().trim();
                 presenter.validDate(username, code, password, repassword);
                 break;
         }
