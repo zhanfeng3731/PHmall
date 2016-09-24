@@ -12,7 +12,7 @@ import butterknife.OnClick;
 /**
  * Created by csh
  * Created date 2016/9/18.
- * Description
+ * Description 消息中心
  */
 public class MessageActivity extends ToolBarActivity<MessagePresenter>{
     @Override

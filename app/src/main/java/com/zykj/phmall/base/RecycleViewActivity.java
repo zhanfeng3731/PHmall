@@ -47,6 +47,12 @@ public abstract class RecycleViewActivity<P extends ListPresenter, A extends Bas
     protected abstract A provideAdapter();
 
     @Override
+    public void showProgress() {}
+
+    @Override
+    public void hideProgress() {}
+
+    @Override
     public void loadData() {
         presenter.getList(rootView, 1, 0);
     }

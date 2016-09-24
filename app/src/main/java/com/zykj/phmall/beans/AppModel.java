@@ -12,14 +12,13 @@ public class AppModel {
     /**
      * 当前帐号是否已经登录的标识
      */
-	private boolean login = false;
+	private boolean login = false;//是否已经登录
     private int userid;//用户Id
     private String username;//登录账号
     private String password;//登录密码
     private String avatar;//头像
     private String realname;//手机
-//    private String money;//我的钱包
-//    private String integral;//积分
+    private String key;//登陆token唯一标志
     private String version;//版本号
     private String is_intro;//是否引导
     private String sign;//备注
@@ -48,15 +47,11 @@ public class AppModel {
         if(utils.getRealName() != null){
             model.realname= utils.getRealName();
         }
-//
-//        if(utils.getMoney() != null){
-//            model.money= utils.getMoney();
-//        }
-//
-//        if(utils.getIntegral() != null){
-//            model.integral= utils.getIntegral();
-//        }
-//
+
+        if(utils.getKey() != null){
+            model.key= utils.getKey();
+        }
+
         if(utils.getVersion() != null){
             model.version= utils.getVersion();
         }
@@ -114,20 +109,13 @@ public class AppModel {
 		this.realname = realname;
         utils.setRealName(realname);
 	}
-//	public String getMoney() {
-//		return money;
-//	}
-//	public void setMoney(String money) {
-//		this.money = money;
-//        utils.setMoney(money);
-//	}
-//	public String getIntegral() {
-//		return integral;
-//	}
-//	public void setIntegral(String integral) {
-//		this.integral = integral;
-//        utils.setIntegral(integral);
-//	}
+	public String getKey() {
+		return key;
+	}
+	public void setKey(String key) {
+		this.key = key;
+		utils.setKey(key);
+	}
 	public String getVersion() {
 		return version;
 	}
@@ -157,8 +145,7 @@ public class AppModel {
 		this.setAvatar("");
 		this.setSign("");
 		this.setRealName("");
-//		this.setMoney("");
-//		this.setIntegral("");
+		this.setKey("");
 		utils.clear();
 	}
 }

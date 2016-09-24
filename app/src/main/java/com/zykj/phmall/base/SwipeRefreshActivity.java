@@ -89,10 +89,12 @@ public abstract class SwipeRefreshActivity<P extends ListPresenter, A extends Ba
         }
     }
 
+    @Override
     public void showProgress() {
         mSwipeRefreshWidget.setRefreshing(true);
     }
 
+    @Override
     public void hideProgress() {
         mSwipeRefreshWidget.setRefreshing(false);
     }

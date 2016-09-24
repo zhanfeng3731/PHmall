@@ -3,6 +3,7 @@ package com.zykj.phmall.activity;
 import android.view.View;
 
 import com.zykj.phmall.R;
+import com.zykj.phmall.base.BaseApp;
 import com.zykj.phmall.base.ToolBarActivity;
 import com.zykj.phmall.presenter.PersonalSettingPresenter;
 
@@ -43,7 +44,9 @@ public class PersonalSettingActivity extends ToolBarActivity<PersonalSettingPres
                 startActivity(WithdrawActivity.class);
                 break;
             case R.id.tv_exit:
-                startActivity(WithdrawActivity.class);
+                BaseApp.getModel().clear();
+                startActivity(LoginActivity.class);
+                finish();
                 break;
         }
     }

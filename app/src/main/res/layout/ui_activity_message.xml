@@ -21,12 +21,14 @@
             android:src="@mipmap/tongzhixiaoxi"/>
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/ten"
             android:orientation="vertical">
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="bottom"
                 android:orientation="horizontal">
                 <TextView
                     android:layout_width="0dp"
@@ -42,9 +44,10 @@
                     android:textColor="@color/theme_font"/>
             </LinearLayout>
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/five"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_marginTop="@dimen/three"
                 android:text="@string/no_new"
                 android:textSize="@dimen/t_sixteen"
                 android:textColor="@color/theme_font"/>
@@ -65,12 +68,14 @@
             android:src="@mipmap/jiaoyixinxi"/>
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/ten"
             android:orientation="vertical">
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="bottom"
                 android:orientation="horizontal">
                 <TextView
                     android:layout_width="0dp"
@@ -86,9 +91,10 @@
                     android:textColor="@color/theme_font"/>
             </LinearLayout>
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/five"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_marginTop="@dimen/three"
                 android:text="@string/no_new"
                 android:textSize="@dimen/t_sixteen"
                 android:textColor="@color/theme_font"/>
@@ -109,12 +115,14 @@
             android:src="@mipmap/huodongxinxi"/>
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/ten"
             android:orientation="vertical">
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="bottom"
                 android:orientation="horizontal">
                 <TextView
                     android:layout_width="0dp"
@@ -130,9 +138,10 @@
                     android:textColor="@color/theme_font"/>
             </LinearLayout>
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/five"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_marginTop="@dimen/three"
                 android:text="@string/no_new"
                 android:textSize="@dimen/t_sixteen"
                 android:textColor="@color/theme_font"/>
@@ -153,12 +162,14 @@
             android:src="@mipmap/zichanbiandong"/>
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/ten"
             android:orientation="vertical">
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="bottom"
                 android:orientation="horizontal">
                 <TextView
                     android:layout_width="0dp"
@@ -174,9 +185,10 @@
                     android:textColor="@color/theme_font"/>
             </LinearLayout>
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/five"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_marginTop="@dimen/three"
                 android:text="@string/no_new"
                 android:textSize="@dimen/t_sixteen"
                 android:textColor="@color/theme_font"/>

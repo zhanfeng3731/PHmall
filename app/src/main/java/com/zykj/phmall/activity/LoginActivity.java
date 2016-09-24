@@ -7,7 +7,7 @@ import android.widget.ImageView;
 
 import com.zykj.phmall.R;
 import com.zykj.phmall.base.BaseActivity;
-import com.zykj.phmall.beans.DataBean;
+import com.zykj.phmall.beans.UserBean;
 import com.zykj.phmall.presenter.LoginPresenter;
 import com.zykj.phmall.view.EntityView;
 import butterknife.Bind;
@@ -18,7 +18,7 @@ import butterknife.OnClick;
  * Created date 2016/9/2.
  * Description
  */
-public class LoginActivity extends BaseActivity<LoginPresenter> implements EntityView<DataBean> {
+public class LoginActivity extends BaseActivity<LoginPresenter> implements EntityView<UserBean> {
 
     @Bind(R.id.iv_col)
     ImageView iv_col;
@@ -55,8 +55,7 @@ public class LoginActivity extends BaseActivity<LoginPresenter> implements Entit
             case R.id.tv_login:
                 /*登录*/
                 hideSoftMethod(et_username);
-                startActivity(MainActivity.class);
-                //presenter.login(et_username,et_username.getText().toString(),et_password.getText().toString());
+                presenter.login(et_username,et_username.getText().toString(),et_password.getText().toString());
                 break;
             case R.id.tv_forget:
                 /*忘记密码*/
@@ -73,20 +72,9 @@ public class LoginActivity extends BaseActivity<LoginPresenter> implements Entit
     protected void initAllMembersView() {}
 
     @Override
-    public void model(DataBean user) {
+    public void model(UserBean user) {
         //snb("登录成功");
-//        String password = et_password.getText().toString().trim();
-//        BaseApp.getModel().setLogin(true);//是否已登录
-//        BaseApp.getModel().setUserid(user.Id);//用户Id
-//        BaseApp.getModel().setUsername(user.UserName);//手机号
-//        BaseApp.getModel().setRealName(user.RealName);//真实姓名
-//        BaseApp.getModel().setAddress(user.CompanyAddress);//工作地
-//        BaseApp.getModel().setPassword(password);//密码
-//        BaseApp.getModel().setAvatar(user.ImagePath);//头像
-//        BaseApp.getModel().setSpareSecond(user.SpareSecond);//是否接收推送
-//        BaseApp.getModel().setSpareThird(user.SpareThird);//是否开启声音
-//        ToolsUtils.toast(this, user.Id+"");
-//        startActivity(MainActivity.class);
-//        finish();
+        startActivity(MainActivity.class);
+        finish();
     }
 }

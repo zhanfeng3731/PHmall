@@ -10,6 +10,7 @@
         android:layout_width="250dp"
         android:layout_height="125dp"
         android:orientation="vertical"
+        android:background="@android:color/white"
         android:gravity="center">
 
         <com.rey.material.widget.ProgressView
@@ -23,10 +24,9 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:maxLines="1"
             android:layout_marginTop="15dp"
-            android:text="@string/app_name"
+            android:text="@string/app_wait"
             android:textColor="@color/theme_font"
-            android:textSize="@dimen/t_twenty_eight"/>
+            android:textSize="@dimen/t_sixteen"/>
     </LinearLayout>
 </LinearLayout>

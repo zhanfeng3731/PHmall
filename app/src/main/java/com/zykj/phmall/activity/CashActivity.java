@@ -1,15 +1,36 @@
 package com.zykj.phmall.activity;
 
+import android.widget.EditText;
+import android.widget.TextView;
+
 import com.zykj.phmall.R;
 import com.zykj.phmall.base.ToolBarActivity;
 import com.zykj.phmall.presenter.CashPresenter;
+import com.zykj.phmall.utils.ToolsUtils;
+import com.zykj.phmall.view.StateView;
+
+import butterknife.Bind;
+import butterknife.OnClick;
 
 /**
  * Created by csh
  * Created date 2016/9/19.
  * Description 线下收银
  */
-public class CashActivity extends ToolBarActivity<CashPresenter> {
+public class CashActivity extends ToolBarActivity<CashPresenter> implements StateView{
+
+    @Bind(R.id.et_merchant)
+    EditText et_merchant;//门店账号
+    @Bind(R.id.et_password)
+    EditText et_password;//门店密码
+    @Bind(R.id.et_admin)
+    EditText et_admin;//会员账号
+    @Bind(R.id.et_money)
+    EditText et_money;//收款金额
+    @Bind(R.id.et_suggest)
+    EditText et_suggest;//收款说明
+    @Bind(R.id.tv_btn)
+    TextView tv_btn;//提交
     @Override
     protected int provideContentViewId() {
         return R.layout.ui_activity_cash;
@@ -22,6 +43,26 @@ public class CashActivity extends ToolBarActivity<CashPresenter> {
 
     @Override
     public CashPresenter createPresenter() {
-        return null;
+        return new CashPresenter();
+    }
+
+    @OnClick(R.id.tv_btn)
+    protected void submit(){
+        String merchant = et_merchant.getText().toString();
+        String password = et_password.getText().toString();
+        String admin = et_admin.getText().toString();
+        String money = et_money.getText().toString();
+        String suggest = et_suggest.getText().toString();
+        presenter.submit(rootView,merchant,password,admin,money,suggest);
+    }
+
+    @Override
+    public void success() {
+        ToolsUtils.toast(this, "充值成功！");
+    }
+
+    @Override
+    public void verification() {
+
     }
 }

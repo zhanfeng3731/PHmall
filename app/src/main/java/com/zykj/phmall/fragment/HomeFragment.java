@@ -20,6 +20,7 @@ import com.zykj.phmall.activity.MainActivity;
 import com.zykj.phmall.activity.ManagerActivity;
 import com.zykj.phmall.activity.MemberActivity;
 import com.zykj.phmall.activity.MessageActivity;
+import com.zykj.phmall.activity.MessageListActivity;
 import com.zykj.phmall.activity.NewsActivity;
 import com.zykj.phmall.activity.SignActivity;
 import com.zykj.phmall.activity.WithdrawActivity;
@@ -118,7 +119,7 @@ public class HomeFragment extends BaseFragment<HomePresenter> implements OnItemC
             case R.id.ll_spread:
                 break;
             case R.id.ll_message:
-                startActivity(MessageActivity.class);
+                startActivity(MessageListActivity.class);
                 break;
             case R.id.ll_shake:
                 break;
