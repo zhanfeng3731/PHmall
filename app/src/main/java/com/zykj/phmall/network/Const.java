@@ -20,7 +20,8 @@ public class Const {
     public static final String SYSTEMMSG = "?act=member_message&op=systemmsg";	//消息中心
     public static final String GETMEMBER = "?act=member_index&op=index";		//会员计划
     public static final String SHOUKUAN = "?act=seller_order&op=shoukuan";		//线下收银
-
+    public static final String VOUCHER = "?act=member_voucher&op=voucher_list";  //代金券
+    public static final String WALLET = "?act=member_redpacket&op=redpacket_list";  //红包
     public static final int OK = 200;
 
     public static String getUrl(String token){

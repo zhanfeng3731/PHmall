@@ -2,9 +2,11 @@ package com.zykj.phmall.network;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.zykj.phmall.beans.MemberBean;
+import com.zykj.phmall.beans.ArrayBean;
 import com.zykj.phmall.beans.MessageBean;
 import com.zykj.phmall.beans.UserBean;
+import com.zykj.phmall.beans.VoucherBean;
+import com.zykj.phmall.beans.WalletBean;
 
 import java.util.ArrayList;
 import java.util.Map;
@@ -43,7 +45,7 @@ public class HttpUtils {
     }
 
     /**消息中心*/
-    public static void SystemMsg(Subscriber<BaseEntityRes<ArrayList<MessageBean>>> callback, Map<String, Object> map){
+    public static void SystemMsg(SubscriberRes<ArrayList<MessageBean>> callback, Map<String, Object> map) {
         addSubscription(Net.getService().SystemMsg(map).subscribeOn(sc1).observeOn(sc2).subscribe(callback));
     }
 
@@ -62,4 +64,19 @@ public class HttpUtils {
     public static void addSubscription(Subscription s) {
         mCompositeSubscription.add(s);
     }
+
+    /**
+     * 店铺代金券
+     */
+    public static void SystemVoucher(SubscriberRes<ArrayBean<VoucherBean>> callback, Map<String, Object> map) {
+        addSubscription(Net.getService().SystemVoucher(map).subscribeOn(sc1).observeOn(sc2).subscribe(callback));
+    }
+
+    /**
+     * 红包
+     */
+    public static void SystemWallet(SubscriberRes<ArrayBean<WalletBean>> callback, Map<String, Object> map) {
+        addSubscription(Net.getService().SystemWallet(map).subscribeOn(sc1).observeOn(sc2).subscribe(callback));
+    }
+
 }

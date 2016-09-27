@@ -5,6 +5,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.TextView;
+
 import com.zykj.phmall.R;
 import com.zykj.phmall.base.BaseAdapter;
 import com.zykj.phmall.beans.MessageBean;
@@ -23,6 +24,7 @@ public class MessageAdapter extends BaseAdapter<MessageAdapter.MessageHolder, Me
     public MessageAdapter(Context context) {
         super(context);
     }
+
 
     @Override
     public void onBindViewHolder(MessageAdapter.MessageHolder holder, int position) {

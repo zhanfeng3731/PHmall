@@ -1,17 +1,17 @@
 package com.zykj.phmall.network;
 
-import com.zykj.phmall.beans.MemberBean;
+import com.zykj.phmall.beans.ArrayBean;
 import com.zykj.phmall.beans.MessageBean;
 import com.zykj.phmall.beans.UserBean;
+import com.zykj.phmall.beans.VoucherBean;
+import com.zykj.phmall.beans.WalletBean;
 
 import java.util.ArrayList;
 import java.util.Map;
 
-import retrofit.http.Field;
 import retrofit.http.FieldMap;
 import retrofit.http.FormUrlEncoded;
 import retrofit.http.POST;
-import retrofit.http.Path;
 import rx.Observable;
 
 /**
@@ -79,4 +79,14 @@ public interface ApiService {
 	@FormUrlEncoded
 	@POST(Const.SHOUKUAN)
 	Observable<BaseEntityRes<Object>> ShouKuan(@FieldMap Map<String, Object> params);
+
+	//店铺代金券
+	@FormUrlEncoded
+	@POST(Const.VOUCHER)
+	Observable<BaseEntityRes<ArrayBean<VoucherBean>>> SystemVoucher(@FieldMap Map<String, Object> params);
+
+	//红包
+	@FormUrlEncoded
+	@POST(Const.WALLET)
+	Observable<BaseEntityRes<ArrayBean<WalletBean>>> SystemWallet(@FieldMap Map<String, Object> params);
 }
