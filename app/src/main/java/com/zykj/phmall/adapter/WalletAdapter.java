@@ -4,6 +4,7 @@ import android.content.Context;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.zykj.phmall.R;
@@ -45,6 +46,9 @@ public class WalletAdapter extends BaseAdapter<WalletAdapter.WalletHolder, Walle
             TextUtil.setText(holder.tv_money_count, wtb.rpacket_price);
             TextUtil.setText(holder.tv_used_limit, "满" + wtb.rpacket_limit + "可用");
             TextUtil.setText(holder.tv_limit, "仅限" + wtb.rpacket_owner_name + "账号使用");
+            if (wtb.rpacket_state_key.equals("unused")) {
+
+            }
         }
     }
 
@@ -65,6 +69,9 @@ public class WalletAdapter extends BaseAdapter<WalletAdapter.WalletHolder, Walle
         @Nullable
         @Bind(R.id.tv_limit)
         TextView tv_limit;
+        @Nullable
+        @Bind(R.id.iv_used)
+        ImageView iv_used;
 
         WalletHolder(View view) {
             super(view);

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
+    android:id="@+id/snack_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/theme_backgrond"
@@ -8,24 +9,19 @@
 
     <include layout="@layout/ui_view_toolbar" />
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="9">
 
         <android.support.v7.widget.RecyclerView
-            android:id="@+id/rcview"
+            android:id="@+id/recycle_view"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:scrollbars="vertical" />
-    </ScrollView>
+            android:layout_height="0dp"
+            android:layout_weight="9"
+            android:scrollbars="vertical"></android.support.v7.widget.RecyclerView>
     <LinearLayout
         android:id="@+id/ll_addnewaddress"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:background="@color/white">
-
         <TextView
             android:id="@+id/tv_addnewaddress"
             android:layout_width="fill_parent"

@@ -2,6 +2,7 @@ package com.zykj.phmall.network;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.zykj.phmall.beans.AddressBean;
 import com.zykj.phmall.beans.ArrayBean;
 import com.zykj.phmall.beans.MessageBean;
 import com.zykj.phmall.beans.UserBean;
@@ -79,4 +80,10 @@ public class HttpUtils {
         addSubscription(Net.getService().SystemWallet(map).subscribeOn(sc1).observeOn(sc2).subscribe(callback));
     }
 
+    /**
+     * 收货地址
+     */
+    public static void SystemAddress(SubscriberRes<ArrayBean<AddressBean>> callback, Map<String, Object> map) {
+        addSubscription(Net.getService().SystemAddress(map).subscribeOn(sc1).observeOn(sc2).subscribe(callback));
+    }
 }

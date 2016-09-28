@@ -1,5 +1,6 @@
 package com.zykj.phmall.network;
 
+import com.zykj.phmall.beans.AddressBean;
 import com.zykj.phmall.beans.ArrayBean;
 import com.zykj.phmall.beans.MessageBean;
 import com.zykj.phmall.beans.UserBean;
@@ -89,4 +90,10 @@ public interface ApiService {
 	@FormUrlEncoded
 	@POST(Const.WALLET)
 	Observable<BaseEntityRes<ArrayBean<WalletBean>>> SystemWallet(@FieldMap Map<String, Object> params);
+
+	//红包
+	@FormUrlEncoded
+	@POST(Const.ADDRESS)
+	Observable<BaseEntityRes<ArrayBean<AddressBean>>> SystemAddress(@FieldMap Map<String, Object> params);
+
 }

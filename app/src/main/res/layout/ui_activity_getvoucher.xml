@@ -69,7 +69,7 @@
                 android:inputType="text"
                 android:paddingLeft="@dimen/fifteen"
                 android:paddingRight="@dimen/fifteen"
-                android:hint="请输入卡密" />
+                android:hint="请输入验证码" />
 
             <RelativeLayout
                 android:layout_width="0dp"
@@ -77,16 +77,10 @@
                 android:orientation="horizontal"
                 android:layout_weight="6">
 
-                <TextView
-                    android:id="@+id/tv_submit"
-                    android:layout_width="@dimen/sixty"
-                    android:layout_height="@dimen/thirty_five"
-                    android:text="ESLA"
-                    android:layout_centerInParent="true"
-                    android:textColor="@android:color/white"
-                    android:textSize="@dimen/t_sixteen"
-                    android:background="@drawable/radius_solid_theme"
-                    android:gravity="center" />
+                <ImageView
+                    android:id="@+id/iv_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
             </RelativeLayout>
         </LinearLayout>
     </LinearLayout>

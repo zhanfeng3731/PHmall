@@ -1,26 +1,35 @@
 package com.zykj.phmall.activity;
 
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
 import com.zykj.phmall.R;
-import com.zykj.phmall.base.ToolBarActivity;
+import com.zykj.phmall.adapter.AddressAdapter;
+import com.zykj.phmall.base.RecycleViewActivity;
+import com.zykj.phmall.beans.AddressBean;
 import com.zykj.phmall.presenter.AddressManagePresenter;
+
+import java.util.List;
 
 import butterknife.OnClick;
 
 /**
  * Created by 徐学坤 on 2016/9/20.
  */
-public class AddressManageActivity extends ToolBarActivity<AddressManagePresenter> {
+public class AddressManageActivity extends RecycleViewActivity<AddressManagePresenter, AddressAdapter, AddressBean> {
 
-//    @Bind(R.id.iv_img1)
-//    ImageView iv_img1;
-//    @Bind(R.id.iv_img2)
-//    ImageView iv_img2;
-//    @Bind(R.id.iv_img3)
-//    ImageView iv_img3;
-//    @Bind(R.id.iv_img4)
-//    ImageView iv_img4;
+    public int page = 1;
+
+    @Override
+    protected RecyclerView.LayoutManager provideLayoutManager() {
+        return new LinearLayoutManager(this);
+    }
+
+    @Override
+    protected AddressAdapter provideAdapter() {
+        return new AddressAdapter(getContext());
+    }
 
     @Override
     protected int provideContentViewId() {
@@ -34,7 +43,27 @@ public class AddressManageActivity extends ToolBarActivity<AddressManagePresente
 
     @Override
     public AddressManagePresenter createPresenter() {
-        return null;
+        return new AddressManagePresenter();
+    }
+
+
+    @Override
+    protected void initAllMembersView() {
+        super.initAllMembersView();
+        presenter.getList(rootView, page, 0);
+    }
+
+    @Override
+    public void onItemClick(View view, int position) {
+
+    }
+
+    @Override
+    public void addNews(List<AddressBean> data, int count) {
+        adapter.addDatas(data, page);
+        if (adapter.mData.size() >= count) {
+            adapter.setShowFooter(false);
+        }
     }
 
     @OnClick({R.id.ll_addnewaddress})

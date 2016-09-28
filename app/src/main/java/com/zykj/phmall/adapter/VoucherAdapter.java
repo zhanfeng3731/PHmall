@@ -26,7 +26,6 @@ public class VoucherAdapter extends BaseAdapter<VoucherAdapter.VoucherHolder, Vo
 
     @Override
     public int provideItemLayoutId() {
-        Log.e("TAG", "++++++++++++");
         return R.layout.ui_item_cardview;
     }
 
