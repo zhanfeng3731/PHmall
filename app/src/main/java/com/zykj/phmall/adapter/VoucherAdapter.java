@@ -3,7 +3,6 @@ package com.zykj.phmall.adapter;
 import android.content.Context;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
@@ -31,7 +30,6 @@ public class VoucherAdapter extends BaseAdapter<VoucherAdapter.VoucherHolder, Vo
 
     @Override
     public VoucherHolder createVH(View view) {
-        Log.e("TAG", "----------");
         return new VoucherHolder(view);
     }
 

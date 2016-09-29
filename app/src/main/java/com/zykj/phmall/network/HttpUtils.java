@@ -4,7 +4,9 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.zykj.phmall.beans.AddressBean;
 import com.zykj.phmall.beans.ArrayBean;
+import com.zykj.phmall.beans.ManagerBean;
 import com.zykj.phmall.beans.MessageBean;
+import com.zykj.phmall.beans.PuScoreBean;
 import com.zykj.phmall.beans.UserBean;
 import com.zykj.phmall.beans.VoucherBean;
 import com.zykj.phmall.beans.WalletBean;
@@ -86,4 +88,19 @@ public class HttpUtils {
     public static void SystemAddress(SubscriberRes<ArrayBean<AddressBean>> callback, Map<String, Object> map) {
         addSubscription(Net.getService().SystemAddress(map).subscribeOn(sc1).observeOn(sc2).subscribe(callback));
     }
+
+    /**
+     * 普积分
+     */
+    public static void SystemPuScore(SubscriberRes<ArrayBean<PuScoreBean>> callback, Map<String, Object> map) {
+        addSubscription(Net.getService().SystemPuScore(map).subscribeOn(sc1).observeOn(sc2).subscribe(callback));
+    }
+
+    /**
+     * 惠积分
+     */
+    public static void SystemManager(SubscriberRes<ArrayBean<ManagerBean>> callback, Map<String, Object> map) {
+        addSubscription(Net.getService().SystemManager(map).subscribeOn(sc1).observeOn(sc2).subscribe(callback));
+    }
+
 }

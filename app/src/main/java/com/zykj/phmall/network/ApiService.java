@@ -2,7 +2,9 @@ package com.zykj.phmall.network;
 
 import com.zykj.phmall.beans.AddressBean;
 import com.zykj.phmall.beans.ArrayBean;
+import com.zykj.phmall.beans.ManagerBean;
 import com.zykj.phmall.beans.MessageBean;
+import com.zykj.phmall.beans.PuScoreBean;
 import com.zykj.phmall.beans.UserBean;
 import com.zykj.phmall.beans.VoucherBean;
 import com.zykj.phmall.beans.WalletBean;
@@ -95,5 +97,15 @@ public interface ApiService {
 	@FormUrlEncoded
 	@POST(Const.ADDRESS)
 	Observable<BaseEntityRes<ArrayBean<AddressBean>>> SystemAddress(@FieldMap Map<String, Object> params);
+
+	//普积分
+	@FormUrlEncoded
+	@POST(Const.PUSCORE)
+	Observable<BaseEntityRes<ArrayBean<PuScoreBean>>> SystemPuScore(@FieldMap Map<String, Object> params);
+
+	//惠积分
+	@FormUrlEncoded
+	@POST(Const.MANAGER)
+	Observable<BaseEntityRes<ArrayBean<ManagerBean>>> SystemManager(@FieldMap Map<String, Object> params);
 
 }

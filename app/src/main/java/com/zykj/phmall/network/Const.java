@@ -23,6 +23,8 @@ public class Const {
     public static final String VOUCHER = "?act=member_voucher&op=voucher_list";  //代金券
     public static final String WALLET = "?act=member_redpacket&op=redpacket_list";  //红包
     public static final String ADDRESS = "?act=member_address&op=address_list";  //收货地址
+    public static final String PUSCORE = "?act=member_points&op=pointslog";  //普积分
+    public static final String MANAGER = "?act=member_points&op=reds_pointslog";  //惠积分
     public static final int OK = 200;
 
     public static String getUrl(String token){
