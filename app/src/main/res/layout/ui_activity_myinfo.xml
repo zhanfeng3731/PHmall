@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
+    android:id="@+id/snack_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/theme_backgrond">
@@ -79,7 +80,8 @@
             android:layout_toRightOf="@id/tv_star"
             android:layout_centerVertical="true"
             android:gravity="right"
-            android:hint="李小萌"
+            android:text="李小萌"
+            android:textColor="#FFAAAAAA"
             android:textSize="@dimen/t_fifteen"
             android:inputType="text"
             android:layout_marginRight="@dimen/ten" />
@@ -95,11 +97,11 @@
         android:paddingRight="@dimen/ten">
 
         <TextView
-            android:id="@+id/tv_workplace"
+            android:id="@+id/tv_licence_number"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingLeft="@dimen/ten"
-            android:text="工作地"
+            android:text="身份证号"
             android:textColor="@color/theme_blacker"
             android:textSize="@dimen/t_eighteen"
             android:layout_centerVertical="true" />
@@ -110,12 +112,12 @@
             android:layout_height="wrap_content"
             android:text="*"
             android:layout_centerVertical="true"
-            android:layout_toRightOf="@id/tv_workplace"
+            android:layout_toRightOf="@id/tv_licence_number"
             android:layout_marginLeft="@dimen/five"
             android:textColor="@color/theme_match" />
 
         <EditText
-            android:id="@+id/et_workplace"
+            android:id="@+id/et_licence_number"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/white"
@@ -124,7 +126,8 @@
             android:layout_centerVertical="true"
             android:gravity="right"
             android:inputType="text"
-            android:hint="山东临沂"
+            android:text="山东临沂"
+            android:textColor="#FFAAAAAA"
             android:textSize="@dimen/t_fifteen"
             android:layout_marginRight="@dimen/ten" />
     </RelativeLayout>
@@ -158,9 +161,39 @@
             android:layout_centerVertical="true"
             android:inputType="number"
             android:gravity="right"
-            android:hint="18553904085"
+            android:text="18553904085"
+            android:textColor="#FFAAAAAA"
             android:textSize="@dimen/t_fifteen"
             android:layout_marginRight="@dimen/ten" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_amend_password"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fifty"
+        android:layout_marginTop="@dimen/two"
+        android:background="@android:color/white"
+        android:paddingLeft="@dimen/ten"
+        android:paddingRight="@dimen/ten">
+
+        <TextView
+            android:id="@+id/tv_amend_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/ten"
+            android:text="修改密码"
+            android:textColor="@color/theme_blacker"
+            android:textSize="@dimen/t_eighteen"
+            android:layout_centerVertical="true" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/app_name"
+            android:src="@mipmap/qianhuijiantou"
+            android:layout_marginRight="@dimen/eight"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true" />
     </RelativeLayout>
 
     <TextView

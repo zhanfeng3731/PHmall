@@ -1,13 +1,12 @@
 package com.zykj.phmall.activity;
 
-import android.app.Activity;
 import android.os.CountDownTimer;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+
 import com.zykj.phmall.R;
-import com.zykj.phmall.base.BaseActivity;
 import com.zykj.phmall.base.ToolBarActivity;
 import com.zykj.phmall.network.Const;
 import com.zykj.phmall.presenter.RegisterPresenter;
@@ -51,13 +50,14 @@ public class RegisterActivity extends ToolBarActivity<RegisterPresenter> impleme
 
     @Override
     protected String provideTitle() {
-        p = getIntent().getIntExtra("p", 0);
-        return p==0?"注册":"忘记密码";
+//        p = getIntent().getIntExtra("p",0);
+        return p == 0 ? "注册" : p == 1 ? "忘记密码" : p == 2 ? "修改登录密码" : "修改支付密码";
     }
 
     @Override
     protected void initAllMembersView() {
         flag = true;
+        p = getIntent().getIntExtra("p", 0);
         tv_register.setText(p==0?"注册":"提交");
         SMSSDK.initSDK(this, Const.APPKEY, Const.APPSECRET);
         EventHandler eh=new EventHandler(){
@@ -103,9 +103,15 @@ public class RegisterActivity extends ToolBarActivity<RegisterPresenter> impleme
                 if(getIntent().getIntExtra("p", 0)==0){
                     //注册
                     presenter.register(rootView,username,password,repassword, 0);
-                }else{
+                } else if (getIntent().getIntExtra("p", 0) == 1) {
                     //忘记密码
                     presenter.register(rootView,username,password,repassword, 1);
+                } else if (getIntent().getIntExtra("p", 0) == 2) {
+                    //修改登录密码
+                    presenter.register(rootView, username, password, repassword, 2);
+                } else {
+                    //修改支付密码
+                    presenter.register(rootView, username, password, repassword, 3);
                 }
             }
         });

@@ -33,32 +33,7 @@
             android:src="@mipmap/qianhuijiantou" />
     </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/ll_message2"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/fifty"
-        android:gravity="center_vertical"
-        android:layout_marginTop="@dimen/one"
-        android:paddingLeft="@dimen/ten"
-        android:paddingRight="@dimen/ten"
-        android:background="@android:color/white"
-        android:orientation="horizontal">
 
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:paddingLeft="@dimen/ten"
-            android:text="@string/per_verity"
-            android:textSize="@dimen/t_eighteen"
-            android:textColor="@color/theme_black" />
-
-        <ImageView
-            android:contentDescription="@string/app_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@mipmap/qianhuijiantou" />
-    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/ll_message3"
