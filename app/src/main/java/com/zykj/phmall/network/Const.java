@@ -20,6 +20,13 @@ public class Const {
     public static final String SYSTEMMSG = "?act=member_message&op=systemmsg";	//消息中心
     public static final String GETMEMBER = "?act=member_index&op=index";		//会员计划
     public static final String SHOUKUAN = "?act=seller_order&op=shoukuan";		//线下收银
+    public static final String MYASSET = "?act=member_index&op=my_asset";		//库存积分
+    public static final String PREDEPOSIT = "?act=member_fund&op=predepositlog";//余额消费记录
+    public static final String RECHARGE = "?act=member_fund&op=index";			//充值明细
+    public static final String CASHLIST = "?act=member_fund&op=pdcashlist";		//余额提现
+    public static final String SYSTEMDATA = "?act=index&op=count_number";		//系统数据
+    public static final String USERDATA = "?act=member_index&op=count_member";	//用户数据
+    public static final String ANNOUNCE = "?act=article&op=index";				//最新公告、资讯中心
     public static final String VOUCHER = "?act=member_voucher&op=voucher_list";  //代金券
     public static final String WALLET = "?act=member_redpacket&op=redpacket_list";  //红包
     public static final String ADDRESS = "?act=member_address&op=address_list";  //收货地址
