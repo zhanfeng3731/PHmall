@@ -10,4 +10,5 @@ import java.util.ArrayList;
 
 public class ArrayBean<M> extends ErrorBean{
     public ArrayList<M> list;
+    public ArrayList<M> article_list;
 }

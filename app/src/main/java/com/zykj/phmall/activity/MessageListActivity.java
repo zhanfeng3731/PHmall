@@ -7,6 +7,7 @@ import com.zykj.phmall.R;
 import com.zykj.phmall.adapter.MessageAdapter;
 import com.zykj.phmall.base.SwipeRefreshActivity;
 import com.zykj.phmall.beans.DataBean;
+import com.zykj.phmall.beans.MessageBean;
 import com.zykj.phmall.presenter.MessagePresenter;
 
 /**
@@ -14,7 +15,7 @@ import com.zykj.phmall.presenter.MessagePresenter;
  * Created date 2016/9/18.
  * Description 消息列表
  */
-public class MessageListActivity extends SwipeRefreshActivity<MessagePresenter,MessageAdapter,DataBean>{
+public class MessageListActivity extends SwipeRefreshActivity<MessagePresenter,MessageAdapter,MessageBean>{
 
     @Override
     protected int provideContentViewId() {

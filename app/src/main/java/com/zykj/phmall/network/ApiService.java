@@ -1,17 +1,17 @@
 package com.zykj.phmall.network;
 
-import com.zykj.phmall.beans.MemberBean;
+import com.zykj.phmall.beans.AnnounceBean;
+import com.zykj.phmall.beans.ArrayBean;
+import com.zykj.phmall.beans.AssetBean;
+import com.zykj.phmall.beans.FundBean;
+import com.zykj.phmall.beans.HomeBean;
 import com.zykj.phmall.beans.MessageBean;
 import com.zykj.phmall.beans.UserBean;
-
 import java.util.ArrayList;
 import java.util.Map;
-
-import retrofit.http.Field;
 import retrofit.http.FieldMap;
 import retrofit.http.FormUrlEncoded;
 import retrofit.http.POST;
-import retrofit.http.Path;
 import rx.Observable;
 
 /**
@@ -79,4 +79,40 @@ public interface ApiService {
 	@FormUrlEncoded
 	@POST(Const.SHOUKUAN)
 	Observable<BaseEntityRes<Object>> ShouKuan(@FieldMap Map<String, Object> params);
+
+	//获取库存积分
+	@FormUrlEncoded
+	@POST(Const.MYASSET)
+	Observable<BaseEntityRes<AssetBean>> MyAsset(@FieldMap Map<String, Object> params);
+
+	//余额消费记录
+	@FormUrlEncoded
+	@POST(Const.PREDEPOSIT)
+	Observable<BaseEntityRes<ArrayBean<FundBean>>> Predepositlog(@FieldMap Map<String, Object> params);
+
+	//充值记录
+	@FormUrlEncoded
+	@POST(Const.RECHARGE)
+	Observable<BaseEntityRes<ArrayBean<FundBean>>> Recharge(@FieldMap Map<String, Object> params);
+
+	//余额提现
+	@FormUrlEncoded
+	@POST(Const.CASHLIST)
+	Observable<BaseEntityRes<ArrayBean<FundBean>>> Cashlist(@FieldMap Map<String, Object> params);
+
+	//系统积分
+	@FormUrlEncoded
+	@POST(Const.SYSTEMDATA)
+	Observable<BaseEntityRes<HomeBean>> SystemData(@FieldMap Map<String, Object> params);
+
+	//用户积分
+	@FormUrlEncoded
+	@POST(Const.USERDATA)
+	Observable<BaseEntityRes<HomeBean>> UserData(@FieldMap Map<String, Object> params);
+
+	//最新公告、资讯中心
+	@FormUrlEncoded
+	@POST(Const.ANNOUNCE)
+	Observable<BaseEntityRes<ArrayBean<AnnounceBean>>> Announce(@FieldMap Map<String, Object> params);
+
 }

@@ -7,7 +7,7 @@ import android.view.View;
 import com.zykj.phmall.R;
 import com.zykj.phmall.adapter.DepositAdapter;
 import com.zykj.phmall.base.SwipeRefreshFragment;
-import com.zykj.phmall.beans.DataBean;
+import com.zykj.phmall.beans.FundBean;
 import com.zykj.phmall.presenter.DepositPresenter;
 
 /**
@@ -15,19 +15,19 @@ import com.zykj.phmall.presenter.DepositPresenter;
  * Created date 2016/9/19.
  * Description 预存款列表
  */
-public class DepositListFragment extends SwipeRefreshFragment<DepositPresenter, DepositAdapter, DataBean> {
+public class DepositListFragment extends SwipeRefreshFragment<DepositPresenter, DepositAdapter, FundBean> {
 
     public static DepositListFragment newInstance(int type) {
         Bundle args = new Bundle();
         DepositListFragment fragment = new DepositListFragment();
-        args.putInt("type", type);
+        args.putInt("type", type);//0-余额 1-充值 2=提现
         fragment.setArguments(args);
         return fragment;
     }
 
     @Override
     protected int provideContentViewId() {
-        return R.layout.ui_public_list;
+        return R.layout.ui_activity_list;
     }
 
     @Override
@@ -37,7 +37,7 @@ public class DepositListFragment extends SwipeRefreshFragment<DepositPresenter, 
 
     @Override
     public DepositPresenter createPresenter() {
-        return new DepositPresenter();
+        return new DepositPresenter(getArguments().getInt("type"));
     }
 
     @Override
@@ -46,8 +46,13 @@ public class DepositListFragment extends SwipeRefreshFragment<DepositPresenter, 
     }
 
     @Override
+    protected RecyclerView.ItemDecoration provideItemDecoration() {
+        return null;
+    }
+
+    @Override
     protected DepositAdapter provideAdapter() {
-        return new DepositAdapter(getContext());
+        return new DepositAdapter(getContext(), null);
     }
 
     @Override
