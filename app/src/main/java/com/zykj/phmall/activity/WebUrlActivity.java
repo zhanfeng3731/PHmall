@@ -7,6 +7,7 @@ import android.webkit.WebViewClient;
 import com.zykj.phmall.R;
 import com.zykj.phmall.base.ToolBarActivity;
 import com.zykj.phmall.presenter.RechargePresenter;
+
 import butterknife.Bind;
 
 /**
@@ -14,7 +15,7 @@ import butterknife.Bind;
  * Created date 2016/9/19.
  * Description 在线充值
  */
-public class RechargeActivity extends ToolBarActivity<RechargePresenter>{
+public class WebUrlActivity extends ToolBarActivity<RechargePresenter>{
 
     @Bind(R.id.wv_recharge)
     WebView wv_recharge;
@@ -25,7 +26,7 @@ public class RechargeActivity extends ToolBarActivity<RechargePresenter>{
 
     @Override
     protected String provideTitle() {
-        return "在线充值";
+        return getIntent().getStringExtra("title");
     }
 
     @Override
@@ -39,7 +40,7 @@ public class RechargeActivity extends ToolBarActivity<RechargePresenter>{
         // 设置WebView属性，能够执行Javascript脚本
         wv_recharge.getSettings().setJavaScriptEnabled(true);
         // 加载需要显示的网页
-        wv_recharge.loadUrl("http://puhui.ofabao.com/wap/tmpl/member/pdrecharge_add.html");
+        wv_recharge.loadUrl(getIntent().getStringExtra("url"));
         // 设置Web视图
         wv_recharge.setWebViewClient(new HelloWebViewClient());
 

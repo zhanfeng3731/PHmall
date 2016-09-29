@@ -29,6 +29,7 @@
                     android:textSize="@dimen/t_eighteen"
                     android:textColor="@color/theme_color"/>
                 <TextView
+                    android:id="@+id/tv_kucun"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
@@ -39,7 +40,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/fifty"
                     android:gravity="center"
-                    android:text="可收入的金额：50.00元"
+                    android:text="可收入的金额：0.00元"
                     android:textSize="@dimen/t_eighteen"
                     android:textColor="@color/theme_font"/>
             </LinearLayout>

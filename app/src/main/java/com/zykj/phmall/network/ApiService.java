@@ -1,17 +1,14 @@
 package com.zykj.phmall.network;
 
-import com.zykj.phmall.beans.AddressBean;
+import com.zykj.phmall.beans.AnnounceBean;
 import com.zykj.phmall.beans.ArrayBean;
-import com.zykj.phmall.beans.ManagerBean;
+import com.zykj.phmall.beans.AssetBean;
+import com.zykj.phmall.beans.FundBean;
+import com.zykj.phmall.beans.HomeBean;
 import com.zykj.phmall.beans.MessageBean;
-import com.zykj.phmall.beans.PuScoreBean;
 import com.zykj.phmall.beans.UserBean;
-import com.zykj.phmall.beans.VoucherBean;
-import com.zykj.phmall.beans.WalletBean;
-
 import java.util.ArrayList;
 import java.util.Map;
-
 import retrofit.http.FieldMap;
 import retrofit.http.FormUrlEncoded;
 import retrofit.http.POST;
@@ -83,29 +80,39 @@ public interface ApiService {
 	@POST(Const.SHOUKUAN)
 	Observable<BaseEntityRes<Object>> ShouKuan(@FieldMap Map<String, Object> params);
 
-	//店铺代金券
+	//获取库存积分
 	@FormUrlEncoded
-	@POST(Const.VOUCHER)
-	Observable<BaseEntityRes<ArrayBean<VoucherBean>>> SystemVoucher(@FieldMap Map<String, Object> params);
+	@POST(Const.MYASSET)
+	Observable<BaseEntityRes<AssetBean>> MyAsset(@FieldMap Map<String, Object> params);
 
-	//红包
+	//余额消费记录
 	@FormUrlEncoded
-	@POST(Const.WALLET)
-	Observable<BaseEntityRes<ArrayBean<WalletBean>>> SystemWallet(@FieldMap Map<String, Object> params);
+	@POST(Const.PREDEPOSIT)
+	Observable<BaseEntityRes<ArrayBean<FundBean>>> Predepositlog(@FieldMap Map<String, Object> params);
 
-	//红包
+	//充值记录
 	@FormUrlEncoded
-	@POST(Const.ADDRESS)
-	Observable<BaseEntityRes<ArrayBean<AddressBean>>> SystemAddress(@FieldMap Map<String, Object> params);
+	@POST(Const.RECHARGE)
+	Observable<BaseEntityRes<ArrayBean<FundBean>>> Recharge(@FieldMap Map<String, Object> params);
 
-	//普积分
+	//余额提现
 	@FormUrlEncoded
-	@POST(Const.PUSCORE)
-	Observable<BaseEntityRes<ArrayBean<PuScoreBean>>> SystemPuScore(@FieldMap Map<String, Object> params);
+	@POST(Const.CASHLIST)
+	Observable<BaseEntityRes<ArrayBean<FundBean>>> Cashlist(@FieldMap Map<String, Object> params);
 
-	//惠积分
+	//系统积分
 	@FormUrlEncoded
-	@POST(Const.MANAGER)
-	Observable<BaseEntityRes<ArrayBean<ManagerBean>>> SystemManager(@FieldMap Map<String, Object> params);
+	@POST(Const.SYSTEMDATA)
+	Observable<BaseEntityRes<HomeBean>> SystemData(@FieldMap Map<String, Object> params);
+
+	//用户积分
+	@FormUrlEncoded
+	@POST(Const.USERDATA)
+	Observable<BaseEntityRes<HomeBean>> UserData(@FieldMap Map<String, Object> params);
+
+	//最新公告、资讯中心
+	@FormUrlEncoded
+	@POST(Const.ANNOUNCE)
+	Observable<BaseEntityRes<ArrayBean<AnnounceBean>>> Announce(@FieldMap Map<String, Object> params);
 
 }

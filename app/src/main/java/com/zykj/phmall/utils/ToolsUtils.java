@@ -9,12 +9,18 @@ import android.provider.MediaStore;
 import android.util.Log;
 import android.widget.Toast;
 
+import com.bigkoo.convenientbanner.ConvenientBanner;
+import com.bigkoo.convenientbanner.holder.CBViewHolderCreator;
+import com.zykj.phmall.R;
+import com.zykj.phmall.adapter.BannerHolderView;
+
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 import java.util.Locale;
 
 /**
@@ -133,26 +139,22 @@ public class ToolsUtils {
 	}
 	
     /**
-     * @param path 图片路径
-     * @return 图片流
-     * @Description 图片转化成base64字符串
+	 * @param cb_banner 轮播
+	 * @param networkImages 图片
+     * 设置轮播
      */
-//    public static String GetImageStr(String path){
-//    	//将图片文件转化为字节数组字符串，并对其进行Base64编码处理
-//    	//String imgFile = "d://test.jpg";//待处理的图片
-//        InputStream in = null;
-//        byte[] data = null;
-//        //读取图片字节数组
-//        try{
-//            in = new FileInputStream(path);
-//            data = new byte[in.available()];
-//            in.read(data);
-//            in.close();
-//        }catch (IOException e){
-//            e.printStackTrace();
-//        }
-//        //对字节数组Base64编码
-//        BASE64Encoder encoder = new BASE64Encoder();
-//        return encoder.encode(data);//返回Base64编码过的字节数组字符串
-//    }
+    public static void initBannerSetting(ConvenientBanner<String> cb_banner,List<String> networkImages){
+		cb_banner.setPages(new CBViewHolderCreator<BannerHolderView>() {
+			@Override
+			public BannerHolderView createHolder() {
+				return new BannerHolderView();
+			}
+		}, networkImages);
+		cb_banner.setManualPageable(networkImages.size() > 1);//设置不能手动影响
+		if (networkImages.size() > 1) {
+			//设置两个点图片作为翻页指示器，不设置则没有指示器，可以根据自己需求自行配合自己的指示器,不需要圆点指示器可用不设
+			cb_banner.setPageIndicator(new int[]{R.mipmap.ic_page_indicator, R.mipmap.ic_page_indicator_focused});
+			cb_banner.startTurning(5000);
+		}
+    }
 }

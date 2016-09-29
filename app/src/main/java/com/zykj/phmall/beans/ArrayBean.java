@@ -10,8 +10,5 @@ import java.util.ArrayList;
 
 public class ArrayBean<M> extends ErrorBean{
     public ArrayList<M> list;
-    public ArrayList<M> voucher_list;
-    public ArrayList<M> redpacket_list;
-    public ArrayList<M> address_list;
-    public ArrayList<M> log_list;
+    public ArrayList<M> article_list;
 }

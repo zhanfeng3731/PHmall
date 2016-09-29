@@ -12,9 +12,7 @@ import com.zykj.phmall.network.Const;
 import com.zykj.phmall.presenter.RegisterPresenter;
 import com.zykj.phmall.utils.ToolsUtils;
 import com.zykj.phmall.view.StateView;
-
 import org.json.JSONObject;
-
 import butterknife.Bind;
 import butterknife.OnClick;
 import cn.smssdk.EventHandler;

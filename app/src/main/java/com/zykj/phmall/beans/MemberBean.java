@@ -28,9 +28,11 @@ public class MemberBean {
     public String member_login_ip;//
     public String member_old_login_ip;//
     public String member_qqopenid;//
+    public String member_qqinfo;//
     public String member_sinaopenid;//
     public String member_sinainfo;//
     public String weixin_unionid;//
+    public String weixin_info;//
     public String member_points;//
     public String available_predeposit;//
     public String freeze_predeposit;//
@@ -45,6 +47,7 @@ public class MemberBean {
     public String member_cityid;//
     public String member_provinceid;//
     public String member_areainfo;//
+    public String member_privacy;//
     public String member_exppoints;//
     public String invite_one;//
     public String invite_two;//
@@ -73,4 +76,12 @@ public class MemberBean {
     public String predepoit;//
     public int favorites_store;//
     public int favorites_goods;//
+    public int downgrade;//
+    public String downgrade_name;//
+    public int downgrade_exppoints;//
+    public int upgrade;//
+    public String upgrade_name;//
+    public int upgrade_exppoints;//
+    public int less_exppoints;//
+    public int exppoints_rate;//
 }

@@ -39,6 +39,7 @@ public abstract class BaseAdapter<VH extends RecyclerView.ViewHolder, M> extends
     public BaseAdapter(Context context, View header) {
         this.context = context;
         this.header = header;
+        mInflater = LayoutInflater.from(context);
     }
 
     @Override

@@ -185,6 +185,7 @@
                             android:textSize="@dimen/t_sixteen"
                             android:textColor="@color/theme_black"/>
                         <TextView
+                            android:id="@+id/tv_txt1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:paddingLeft="@dimen/ten"
@@ -212,6 +213,7 @@
                             android:textSize="@dimen/t_sixteen"
                             android:textColor="@color/theme_black"/>
                         <TextView
+                            android:id="@+id/tv_txt3"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:paddingLeft="@dimen/ten"
@@ -245,6 +247,7 @@
                             android:textSize="@dimen/t_sixteen"
                             android:textColor="@color/theme_black"/>
                         <TextView
+                            android:id="@+id/tv_txt2"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:paddingLeft="@dimen/ten"
@@ -272,6 +275,7 @@
                             android:textSize="@dimen/t_sixteen"
                             android:textColor="@color/theme_black"/>
                         <TextView
+                            android:id="@+id/tv_txt4"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:paddingLeft="@dimen/ten"
@@ -336,6 +340,7 @@
                             android:textSize="@dimen/t_sixteen"
                             android:textColor="@color/theme_black"/>
                         <TextView
+                            android:id="@+id/tv_txt5"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:paddingLeft="@dimen/ten"
@@ -408,6 +413,7 @@
                             android:textSize="@dimen/t_sixteen"
                             android:textColor="@color/theme_black"/>
                         <TextView
+                            android:id="@+id/tv_txt6"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:paddingLeft="@dimen/ten"
@@ -435,6 +441,7 @@
                             android:textSize="@dimen/t_sixteen"
                             android:textColor="@color/theme_black"/>
                         <TextView
+                            android:id="@+id/tv_txt7"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:paddingLeft="@dimen/ten"
@@ -476,6 +483,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/ten"
+                android:layout_marginBottom="@dimen/thirty"
                 android:orientation="horizontal">
                 <TextView
                     android:layout_width="0dp"
@@ -497,13 +505,6 @@
                     android:textSize="@dimen/t_sixteen"
                     android:textColor="@color/theme_color"/>
             </LinearLayout>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/one_hundred_fifty"
-                android:gravity="center"
-                android:textSize="@dimen/t_sixteen"
-                android:textColor="@color/theme_font"
-                android:text="普惠商城V1.0"/>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

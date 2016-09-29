@@ -32,6 +32,9 @@ public abstract class RecycleViewActivity<P extends ListPresenter, A extends Bas
         this.adapter = provideAdapter();
         recyclerView.setAdapter(adapter);
 
+        RecyclerView.ItemDecoration decoration = provideItemDecoration();
+        if(decoration != null)
+            recyclerView.addItemDecoration(decoration);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         adapter.setOnItemClickListener(this);
     }
@@ -45,6 +48,13 @@ public abstract class RecycleViewActivity<P extends ListPresenter, A extends Bas
      * @return 提供Adapter
      */
     protected abstract A provideAdapter();
+
+    /**
+     * @return 提供ItemDecoration
+     */
+    protected RecyclerView.ItemDecoration provideItemDecoration() {
+        return null;
+    }
 
     @Override
     public void showProgress() {}

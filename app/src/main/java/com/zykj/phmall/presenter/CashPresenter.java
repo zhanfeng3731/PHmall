@@ -1,11 +1,15 @@
 package com.zykj.phmall.presenter;
 
 import android.view.View;
+
+import com.zykj.phmall.base.BaseApp;
 import com.zykj.phmall.base.BasePresenter;
+import com.zykj.phmall.beans.AssetBean;
 import com.zykj.phmall.network.HttpUtils;
 import com.zykj.phmall.network.SubscriberRes;
 import com.zykj.phmall.utils.StringUtil;
 import com.zykj.phmall.utils.ToolsUtils;
+import com.zykj.phmall.view.EntityView;
 import com.zykj.phmall.view.StateView;
 import java.util.HashMap;
 
@@ -14,7 +18,24 @@ import java.util.HashMap;
  * Created date 2016/9/19.
  * Description 线下收银
  */
-public class CashPresenter extends BasePresenter<StateView>{
+public class CashPresenter extends BasePresenter<EntityView<String>>{
+    public void myAsset(View rootView){
+        view.showDialog();
+        HashMap<String, Object> map = new HashMap<>();
+        map.put("key", BaseApp.getModel().getKey());
+        HttpUtils.MyAsset(new SubscriberRes<AssetBean>(rootView){
+            @Override
+            public void onSuccess(AssetBean asset) {
+                view.dismissDialog();
+                view.model(asset.kucun_point);
+            }
+            @Override
+            public void onCompleted() {
+                view.dismissDialog();
+            }
+        }, map);
+    }
+
     public void submit(View rootView, String merchant, String password, String admin, String money, String suggest) {
         if(StringUtil.isEmpty(merchant)){
             view.snb("门店账号不能为空!");
@@ -38,7 +59,7 @@ public class CashPresenter extends BasePresenter<StateView>{
                 @Override
                 public void onSuccess(Object res) {
                     view.dismissDialog();
-                    view.success();
+                    view.model("success");
                 }
                 @Override
                 public void onCompleted() {
