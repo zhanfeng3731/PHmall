@@ -16,24 +16,24 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/fifty"
             android:orientation="horizontal"
-            android:weightSum="4"
+            android:weightSum="22"
             android:layout_marginTop="@dimen/five">
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
+                android:layout_weight="7"
                 android:background="@color/white"
                 android:gravity="center"
-                android:text="红包卡密"
+                android:text="代金券卡密"
                 android:textSize="18sp"
                 android:textColor="@color/theme_blacker" />
 
             <EditText
-                android:id="@+id/et_walletpassword"
+                android:id="@+id/et_voucherpassword"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="3"
+                android:layout_weight="15"
                 android:background="@android:color/white"
                 android:inputType="text"
                 android:paddingLeft="@dimen/fifteen"
@@ -46,13 +46,13 @@
             android:layout_height="@dimen/fifty"
             android:orientation="horizontal"
             android:layout_marginTop="@dimen/two"
-            android:weightSum="4"
+            android:weightSum="22"
             android:background="@color/white">
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
+                android:layout_weight="7"
                 android:layout_marginTop="@dimen/two"
                 android:background="@color/white"
                 android:gravity="center"
@@ -61,10 +61,10 @@
                 android:textColor="@color/theme_blacker" />
 
             <EditText
-                android:id="@+id/et_authcode"
+                android:id="@+id/et_vhauthcode"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="2"
+                android:layout_weight="9"
                 android:background="@android:color/white"
                 android:inputType="text"
                 android:paddingLeft="@dimen/fifteen"
@@ -75,24 +75,18 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
-                android:layout_weight="1">
+                android:layout_weight="6">
 
-                <TextView
-                    android:id="@+id/tv_recharge"
-                    android:layout_width="@dimen/sixty"
-                    android:layout_height="@dimen/thirty_five"
-                    android:text="ESLA"
-                    android:layout_centerInParent="true"
-                    android:textColor="@android:color/white"
-                    android:textSize="@dimen/t_sixteen"
-                    android:background="@drawable/radius_solid_theme"
-                    android:gravity="center" />
+                <ImageView
+                    android:id="@+id/iv_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
             </RelativeLayout>
         </LinearLayout>
     </LinearLayout>
 
     <TextView
-        android:id="@+id/tv_sure"
+        android:id="@+id/tv_refer"
         android:layout_width="fill_parent"
         android:layout_height="@dimen/forty_five"
         android:layout_marginLeft="@dimen/twenty"

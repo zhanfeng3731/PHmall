@@ -1,11 +1,13 @@
 package com.zykj.phmall.presenter;
 
 import android.view.View;
+
 import com.zykj.phmall.base.BaseApp;
 import com.zykj.phmall.beans.MessageBean;
 import com.zykj.phmall.network.HttpUtils;
 import com.zykj.phmall.network.SubscriberRes;
 import com.zykj.phmall.view.ArrayView;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -20,6 +22,7 @@ public class MessagePresenter extends ListPresenter<ArrayView> {
         HashMap<String, Object> map = new HashMap<>();
         map.put("key", BaseApp.getModel().getKey());
         HttpUtils.SystemMsg(new SubscriberRes<ArrayList<MessageBean>>(rootView){
+
             @Override
             public void onSuccess(ArrayList<MessageBean> messageList) {
                 view.hideProgress();

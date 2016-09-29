@@ -43,10 +43,10 @@ public class MyPropertyActivity extends ToolBarActivity<MyPropertyPresenter> {
                 startActivity(CashActivity.class);
                 break;
             case R.id.ll_voucher:
-                startActivity(CardBalanceActivity.class);
+                startActivity(VoucherActivity.class);
                 break;
             case R.id.ll_wallet:
-                startActivity(MyPropertyActivity.class);
+                startActivity(WalletActivity.class);
                 break;
         }
     }

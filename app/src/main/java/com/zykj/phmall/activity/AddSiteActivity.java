@@ -4,8 +4,6 @@ import com.zykj.phmall.R;
 import com.zykj.phmall.base.ToolBarActivity;
 import com.zykj.phmall.presenter.AddSitePresenter;
 
-import butterknife.OnClick;
-
 /**
  * Created by 徐学坤 on 2016/9/20.
  */
@@ -22,6 +20,6 @@ public class AddSiteActivity extends ToolBarActivity<AddSitePresenter> {
 
     @Override
     public AddSitePresenter createPresenter() {
-        return new AddSitePresenter();
+        return null;
     }
 }

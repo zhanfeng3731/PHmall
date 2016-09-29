@@ -130,6 +130,7 @@
                             android:textSize="@dimen/t_sixteen"
                             android:textColor="@color/theme_black"/>
                         <TextView
+                            android:id="@+id/tv_rpoints"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center_horizontal"
@@ -158,6 +159,7 @@
                             android:textSize="@dimen/t_sixteen"
                             android:textColor="@color/theme_black"/>
                         <TextView
+                            android:id="@+id/tv_allpoints"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center_horizontal"
@@ -193,6 +195,7 @@
                             android:textSize="@dimen/t_sixteen"
                             android:textColor="@color/theme_black"/>
                         <TextView
+                            android:id="@+id/tv_avpoints"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center_horizontal"
@@ -221,6 +224,7 @@
                             android:textSize="@dimen/t_sixteen"
                             android:textColor="@color/theme_black"/>
                         <TextView
+                            android:id="@+id/tv_back_point"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center_horizontal"

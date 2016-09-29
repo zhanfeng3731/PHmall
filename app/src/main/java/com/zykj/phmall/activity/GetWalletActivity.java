@@ -15,7 +15,7 @@ public class GetWalletActivity extends ToolBarActivity<GetWalletPresenter> {
 
     @Override
     protected String provideTitle() {
-        return "领取平台红包.";
+        return "领取平台红包";
     }
 
     @Override
