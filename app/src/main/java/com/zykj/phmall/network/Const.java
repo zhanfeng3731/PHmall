@@ -32,6 +32,8 @@ public class Const {
     public static final String ADDRESS = "?act=member_address&op=address_list";  //收货地址
     public static final String PUSCORE = "?act=member_points&op=pointslog";  //普积分
     public static final String MANAGER = "?act=member_points&op=reds_pointslog";  //惠积分
+    public static final String MYINFO = "?act=member_index&op=member_information";  //我的信息
+    public static final String MYFEEDBACK = "?act=member_feedback&op=feedback_add";  //用户反馈
     public static final int OK = 200;
 
     public static String getUrl(String token){

@@ -41,10 +41,9 @@ public class PersonalSettingActivity extends ToolBarActivity<PersonalSettingPres
             case R.id.ll_message3:
                 /*支付密码*/
                 startActivity(new Intent(this, RegisterActivity.class).putExtra("p", 3));
-                ;
                 break;
             case R.id.ll_message4:
-                startActivity(WithdrawActivity.class);
+                startActivity(UserOpinionActivity.class);
                 break;
             case R.id.tv_exit:
                 BaseApp.getModel().clear();

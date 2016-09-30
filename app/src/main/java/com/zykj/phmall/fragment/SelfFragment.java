@@ -6,23 +6,19 @@ import android.widget.TextView;
 import com.bigkoo.convenientbanner.ConvenientBanner;
 import com.bigkoo.convenientbanner.holder.CBViewHolderCreator;
 import com.zykj.phmall.R;
-import com.zykj.phmall.activity.AccountActivity;
 import com.zykj.phmall.activity.AddressManageActivity;
 import com.zykj.phmall.activity.CashActivity;
-import com.zykj.phmall.activity.DepositActivity;
 import com.zykj.phmall.activity.MyInfoActivity;
 import com.zykj.phmall.activity.MyPropertyActivity;
 import com.zykj.phmall.activity.MyStoresActivity;
 import com.zykj.phmall.activity.PersonalSettingActivity;
-import com.zykj.phmall.activity.RechargeActivity;
-import com.zykj.phmall.activity.WithdrawActivity;
 import com.zykj.phmall.adapter.BannerHolderView;
 import com.zykj.phmall.adapter.CommonAdapter;
 import com.zykj.phmall.adapter.ViewHolder;
 import com.zykj.phmall.base.BaseFragment;
-import com.zykj.phmall.base.ToolBarFragment;
-import com.zykj.phmall.presenter.HomePresenter;
+import com.zykj.phmall.beans.SystemDataBean;
 import com.zykj.phmall.presenter.SelfPresenter;
+import com.zykj.phmall.view.EntityView;
 import com.zykj.phmall.widget.MyGridView;
 
 import java.util.Arrays;
@@ -36,14 +32,23 @@ import butterknife.OnClick;
  * Created date 2016/9/14.
  * Description 个人中心
  */
-public class SelfFragment extends BaseFragment<HomePresenter> {
+public class SelfFragment extends BaseFragment<SelfPresenter> implements EntityView<SystemDataBean> {
     @Bind(R.id.tv_head)
     TextView tv_head;
     @Bind(R.id.gd_order)
     MyGridView gd_order;
+    @Bind(R.id.tv_rpoints)
+    TextView tv_rpoints;//新增普积分总量
+    @Bind(R.id.tv_avpoints)
+    TextView tv_avpoints;//惠积分总量
+    @Bind(R.id.tv_allpoints)
+    TextView tv_allpoints;//全返单元总量
+    @Bind(R.id.tv_back_point)
+    TextView tv_back_point;//单元返还积分数
     @Bind(R.id.gd_finance)
     MyGridView gd_finance;
     @Bind(R.id.cb_banner)
+
     ConvenientBanner<String> cb_banner;//顶部广告栏控件
     private String[] images = {
             "http://img2.3lian.com/2014/f2/37/d/39.jpg",
@@ -69,6 +74,7 @@ public class SelfFragment extends BaseFragment<HomePresenter> {
     @Override
     protected void initAllMembersView(View view) {
         tv_head.setText(provideTitle());
+        presenter.SystemData(rootView);
         //轮播图
         List<String> networkImages = Arrays.asList(images);
         cb_banner.setPages(new CBViewHolderCreator<BannerHolderView>() {
@@ -100,8 +106,8 @@ public class SelfFragment extends BaseFragment<HomePresenter> {
     }
 
     @Override
-    public HomePresenter createPresenter() {
-        return null;
+    public SelfPresenter createPresenter() {
+        return new SelfPresenter();
     }
 
     @OnClick({R.id.ll_myposter, R.id.ll_myplan, R.id.ll_mysetting, R.id.ll_myaddress, R.id.ll_mymoney,
@@ -137,5 +143,13 @@ public class SelfFragment extends BaseFragment<HomePresenter> {
                 break;
         }
 
+    }
+
+    @Override
+    public void model(SystemDataBean data) {
+        tv_rpoints.setText(String.valueOf(data.allpoints));
+        tv_avpoints.setText(String.valueOf(data.rpoints));
+        tv_allpoints.setText(String.valueOf(data.back_point));
+        tv_back_point.setText(String.valueOf(data.avpoints));
     }
 }

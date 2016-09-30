@@ -12,6 +12,7 @@ import com.zykj.phmall.beans.HomeBean;
 import com.zykj.phmall.beans.ManagerBean;
 import com.zykj.phmall.beans.MessageBean;
 import com.zykj.phmall.beans.PuScoreBean;
+import com.zykj.phmall.beans.SystemDataBean;
 import com.zykj.phmall.beans.UserBean;
 import com.zykj.phmall.beans.VoucherBean;
 import com.zykj.phmall.beans.WalletBean;
@@ -136,6 +137,27 @@ public class HttpUtils {
      */
     public static void SystemManager(SubscriberRes<ArrayBean<ManagerBean>> callback, Map<String, Object> map) {
         addSubscription(Net.getService().SystemManager(map).subscribeOn(sc1).observeOn(sc2).subscribe(callback));
+    }
+
+    /**
+     * 我的信息
+     */
+    public static void MyInfo(Subscriber<BaseEntityRes<String>> callback, Map<String, Object> map) {
+        addSubscription(Net.getService().MyInfo(map).subscribeOn(sc1).observeOn(sc2).subscribe(callback));
+    }
+
+    /**
+     * 系统数据
+     */
+    public static void SelfSystemData(Subscriber<BaseEntityRes<SystemDataBean>> callback, Map<String, Object> map) {
+        addSubscription(Net.getService().SelfSystemData(map).subscribeOn(sc1).observeOn(sc2).subscribe(callback));
+    }
+
+    /**
+     * 用户反馈
+     */
+    public static void MyOpinion(Subscriber<BaseEntityRes<String>> callback, Map<String, Object> map) {
+        addSubscription(Net.getService().MyOpinion(map).subscribeOn(sc1).observeOn(sc2).subscribe(callback));
     }
 
 }

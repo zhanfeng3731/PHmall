@@ -12,7 +12,9 @@ import com.zykj.phmall.network.Const;
 import com.zykj.phmall.presenter.RegisterPresenter;
 import com.zykj.phmall.utils.ToolsUtils;
 import com.zykj.phmall.view.StateView;
+
 import org.json.JSONObject;
+
 import butterknife.Bind;
 import butterknife.OnClick;
 import cn.smssdk.EventHandler;
@@ -55,7 +57,7 @@ public class RegisterActivity extends ToolBarActivity<RegisterPresenter> impleme
     @Override
     protected void initAllMembersView() {
         flag = true;
-        p = getIntent().getIntExtra("p", 0);
+//        p = getIntent().getIntExtra("p", 0);
         tv_register.setText(p==0?"注册":"提交");
         SMSSDK.initSDK(this, Const.APPKEY, Const.APPSECRET);
         EventHandler eh=new EventHandler(){

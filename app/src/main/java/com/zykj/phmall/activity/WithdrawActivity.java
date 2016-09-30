@@ -6,6 +6,7 @@ import android.widget.TextView;
 import com.zykj.phmall.R;
 import com.zykj.phmall.base.ToolBarActivity;
 import com.zykj.phmall.presenter.WithdrawPresenter;
+import com.zykj.phmall.view.StateView;
 
 import butterknife.Bind;
 
@@ -14,7 +15,7 @@ import butterknife.Bind;
  * Created date 2016/9/19.
  * Description 申请提现
  */
-public class WithdrawActivity extends ToolBarActivity<WithdrawPresenter> {
+public class WithdrawActivity extends ToolBarActivity<WithdrawPresenter> implements StateView {
 
     @Bind(R.id.tv_point)
     TextView tv_point;
@@ -49,5 +50,15 @@ public class WithdrawActivity extends ToolBarActivity<WithdrawPresenter> {
     protected void initAllMembersView() {
         super.initAllMembersView();
         presenter.getPoint(rootView, tv_point);
+    }
+
+    @Override
+    public void success() {
+
+    }
+
+    @Override
+    public void verification() {
+
     }
 }

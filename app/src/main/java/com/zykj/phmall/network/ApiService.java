@@ -9,6 +9,7 @@ import com.zykj.phmall.beans.HomeBean;
 import com.zykj.phmall.beans.ManagerBean;
 import com.zykj.phmall.beans.MessageBean;
 import com.zykj.phmall.beans.PuScoreBean;
+import com.zykj.phmall.beans.SystemDataBean;
 import com.zykj.phmall.beans.UserBean;
 import com.zykj.phmall.beans.VoucherBean;
 import com.zykj.phmall.beans.WalletBean;
@@ -146,4 +147,19 @@ public interface ApiService {
 	@FormUrlEncoded
 	@POST(Const.VOUCHER)
 	Observable<BaseEntityRes<ArrayBean<VoucherBean>>> SystemVoucher(@FieldMap Map<String, Object> params);
+
+	//我的信息
+	@FormUrlEncoded
+	@POST(Const.MYINFO)
+	Observable<BaseEntityRes<String>> MyInfo(@FieldMap Map<String, Object> params);
+
+	//系统数据
+	@FormUrlEncoded
+	@POST(Const.SYSTEMDATA)
+	Observable<BaseEntityRes<SystemDataBean>> SelfSystemData(@FieldMap Map<String, Object> params);
+
+	//用户反馈
+	@FormUrlEncoded
+	@POST(Const.MYFEEDBACK)
+	Observable<BaseEntityRes<String>> MyOpinion(@FieldMap Map<String, Object> params);
 }

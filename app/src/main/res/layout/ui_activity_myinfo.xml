@@ -125,8 +125,8 @@
             android:layout_toRightOf="@id/tv_star2"
             android:layout_centerVertical="true"
             android:gravity="right"
-            android:inputType="text"
-            android:text="山东临沂"
+            android:inputType="number"
+            android:text="932879820497194897245"
             android:textColor="#FFAAAAAA"
             android:textSize="@dimen/t_fifteen"
             android:layout_marginRight="@dimen/ten" />
