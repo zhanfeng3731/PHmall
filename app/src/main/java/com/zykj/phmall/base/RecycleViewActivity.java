@@ -7,6 +7,8 @@ import com.zykj.phmall.base.BaseAdapter.OnItemClickListener;
 import com.zykj.phmall.presenter.ListPresenter;
 import com.zykj.phmall.view.ArrayView;
 
+import java.util.List;
+
 import butterknife.Bind;
 
 /**
@@ -65,5 +67,10 @@ public abstract class RecycleViewActivity<P extends ListPresenter, A extends Bas
     @Override
     public void loadData() {
         presenter.getList(rootView, 1, 0);
+    }
+
+    @Override
+    public void addNews(List<M> data, int page) {
+        adapter.addDatas(data, page);
     }
 }

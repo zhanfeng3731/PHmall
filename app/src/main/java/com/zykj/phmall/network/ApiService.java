@@ -4,6 +4,8 @@ import com.zykj.phmall.beans.AddressBean;
 import com.zykj.phmall.beans.AnnounceBean;
 import com.zykj.phmall.beans.ArrayBean;
 import com.zykj.phmall.beans.AssetBean;
+import com.zykj.phmall.beans.BannerBean;
+import com.zykj.phmall.beans.CateBean;
 import com.zykj.phmall.beans.FundBean;
 import com.zykj.phmall.beans.HomeBean;
 import com.zykj.phmall.beans.ManagerBean;
@@ -146,4 +148,24 @@ public interface ApiService {
 	@FormUrlEncoded
 	@POST(Const.VOUCHER)
 	Observable<BaseEntityRes<ArrayBean<VoucherBean>>> SystemVoucher(@FieldMap Map<String, Object> params);
+
+	//申请提现
+	@FormUrlEncoded
+	@POST(Const.WITHDRAW)
+	Observable<BaseEntityRes<Object>> Withdraw(@FieldMap Map<String, Object> params);
+
+	//轮播图
+	@FormUrlEncoded
+	@POST(Const.IMGBANNER)
+	Observable<BaseEntityRes<ArrayBean<BannerBean>>> ImgBanner(@FieldMap Map<String, Object> params);
+
+	//一级分类
+	@FormUrlEncoded
+	@POST(Const.GOODCATE)
+	Observable<BaseEntityRes<ArrayBean<CateBean>>> CateList(@FieldMap Map<String, Object> params);
+
+	//二级分类
+	@FormUrlEncoded
+	@POST(Const.TWOCATE)
+	Observable<BaseEntityRes<ArrayBean<CateBean>>> getSecond(@FieldMap Map<String, Object> params);
 }

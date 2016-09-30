@@ -7,6 +7,8 @@ import com.zykj.phmall.beans.AddressBean;
 import com.zykj.phmall.beans.AnnounceBean;
 import com.zykj.phmall.beans.ArrayBean;
 import com.zykj.phmall.beans.AssetBean;
+import com.zykj.phmall.beans.BannerBean;
+import com.zykj.phmall.beans.CateBean;
 import com.zykj.phmall.beans.FundBean;
 import com.zykj.phmall.beans.HomeBean;
 import com.zykj.phmall.beans.ManagerBean;
@@ -136,6 +138,34 @@ public class HttpUtils {
      */
     public static void SystemManager(SubscriberRes<ArrayBean<ManagerBean>> callback, Map<String, Object> map) {
         addSubscription(Net.getService().SystemManager(map).subscribeOn(sc1).observeOn(sc2).subscribe(callback));
+    }
+
+    /**
+     * 申请提现
+     */
+    public static void Withdraw(SubscriberRes<Object> callback, Map<String, Object> map) {
+        addSubscription(Net.getService().Withdraw(map).subscribeOn(sc1).observeOn(sc2).subscribe(callback));
+    }
+
+    /**
+     * 轮播图
+     */
+    public static void ImgBanner(SubscriberRes<ArrayBean<BannerBean>> callback, Map<String, Object> map) {
+        addSubscription(Net.getService().ImgBanner(map).subscribeOn(sc1).observeOn(sc2).subscribe(callback));
+    }
+
+    /**
+     * 一级分类
+     */
+    public static void CateList(SubscriberRes<ArrayBean<CateBean>> callback, Map<String, Object> map) {
+        addSubscription(Net.getService().CateList(map).subscribeOn(sc1).observeOn(sc2).subscribe(callback));
+    }
+
+    /**
+     * 二级分类
+     */
+    public static void getSecond(SubscriberRes<ArrayBean<CateBean>> callback, Map<String, Object> map) {
+        addSubscription(Net.getService().getSecond(map).subscribeOn(sc1).observeOn(sc2).subscribe(callback));
     }
 
 }

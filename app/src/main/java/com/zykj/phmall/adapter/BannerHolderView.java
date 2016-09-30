@@ -25,7 +25,7 @@ public class BannerHolderView implements Holder<String> {
     @Override
     public void UpdateUI(Context context,int position, String data) {
         imageView.setImageResource(R.mipmap.lunbotu);
-        Glide.with(context).load(data).fitCenter().crossFade().into(imageView);
+        Glide.with(context).load(data).fitCenter().crossFade().placeholder(R.mipmap.ico_square).into(imageView);
         //ImageLoader.getInstance().displayImage(data,imageView);
     }
 }

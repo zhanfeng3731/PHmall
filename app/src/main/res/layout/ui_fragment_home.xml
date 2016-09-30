@@ -287,6 +287,7 @@
                 </LinearLayout>
             </LinearLayout>
             <LinearLayout
+                android:id="@+id/ll_user"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/ten"
@@ -359,6 +360,7 @@
                             android:layout_height="wrap_content"
                             android:orientation="horizontal">
                             <TextView
+                                android:id="@+id/tv_recharge"
                                 android:layout_width="wrap_content"
                                 android:layout_height="@dimen/thirty"
                                 android:paddingLeft="@dimen/fifteen"
@@ -369,6 +371,7 @@
                                 android:textColor="@color/theme_color"
                                 android:background="@drawable/radius_null_theme"/>
                             <TextView
+                                android:id="@+id/tv_withdraw"
                                 android:layout_width="wrap_content"
                                 android:layout_height="@dimen/thirty"
                                 android:paddingLeft="@dimen/fifteen"
@@ -380,6 +383,7 @@
                                 android:background="@drawable/radius_null_theme"/>
                         </LinearLayout>
                         <TextView
+                            android:id="@+id/tv_detail"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="@dimen/ten"
