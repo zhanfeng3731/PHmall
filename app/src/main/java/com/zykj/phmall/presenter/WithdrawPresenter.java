@@ -2,6 +2,7 @@ package com.zykj.phmall.presenter;
 
 import android.view.View;
 import android.widget.TextView;
+
 import com.zykj.phmall.base.BaseApp;
 import com.zykj.phmall.base.BasePresenter;
 import com.zykj.phmall.beans.HomeBean;
@@ -10,6 +11,7 @@ import com.zykj.phmall.network.SubscriberRes;
 import com.zykj.phmall.utils.StringUtil;
 import com.zykj.phmall.utils.TextUtil;
 import com.zykj.phmall.view.StateView;
+
 import java.util.HashMap;
 
 /**
@@ -37,17 +39,17 @@ public class WithdrawPresenter extends BasePresenter<StateView>{
     }
 
     public void submit(View rootView, String txt1, String txt2, String txt3, String txt4, String txt5) {
-        if(StringUtil.isEmpty(txt1)){
+        if (StringUtil.isEmpty(txt1)) {
             view.snb("提现金额不能为空!");
-        }else if(StringUtil.isEmpty(txt2)){
+        } else if (StringUtil.isEmpty(txt2)) {
             view.snb("收款银行不能为空!");
-        }else if(StringUtil.isEmpty(txt3)){
+        } else if (StringUtil.isEmpty(txt3)) {
             view.snb("收款账号不能为空!");
-        }else if(StringUtil.isEmpty(txt4)){
+        } else if (StringUtil.isEmpty(txt4)) {
             view.snb("开户姓名不能为空!");
-        }else if(StringUtil.isEmpty(txt5)){
+        } else if (StringUtil.isEmpty(txt5)) {
             view.snb("支付密码不能为空!");
-        }else{
+        } else {
             view.showDialog();
             HashMap<String, Object> map = new HashMap<>();
             map.put("key", BaseApp.getModel().getKey());
@@ -56,12 +58,13 @@ public class WithdrawPresenter extends BasePresenter<StateView>{
             map.put("pdc_bank_no", txt3);
             map.put("pdc_bank_user", txt4);
             map.put("password", txt5);
-            HttpUtils.Withdraw(new SubscriberRes<Object>(rootView){
+            HttpUtils.Withdraw(new SubscriberRes<Object>(rootView) {
                 @Override
                 public void onSuccess(Object res) {
                     view.dismissDialog();
                     view.success();
                 }
+
                 @Override
                 public void onCompleted() {
                     view.dismissDialog();

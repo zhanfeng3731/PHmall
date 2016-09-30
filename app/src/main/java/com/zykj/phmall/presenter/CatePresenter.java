@@ -2,7 +2,6 @@ package com.zykj.phmall.presenter;
 
 import android.view.View;
 
-import com.zykj.phmall.base.BaseApp;
 import com.zykj.phmall.beans.ArrayBean;
 import com.zykj.phmall.beans.CateBean;
 import com.zykj.phmall.network.HttpUtils;
@@ -20,7 +19,7 @@ public class CatePresenter extends ListPresenter<ArrayView<CateBean>> {
     @Override
     public void getList(View rootView, int page, int count) {
         view.showDialog();
-        HttpUtils.CateList(new SubscriberRes<ArrayBean<CateBean>>(rootView){
+        HttpUtils.CateList(new SubscriberRes<ArrayBean<CateBean>>(rootView) {
             @Override
             public void onSuccess(ArrayBean<CateBean> list) {
                 view.dismissDialog();
@@ -38,7 +37,7 @@ public class CatePresenter extends ListPresenter<ArrayView<CateBean>> {
         view.showDialog();
         HashMap<String, Object> map = new HashMap<>();
         map.put("gc_id", id);
-        HttpUtils.getSecond(new SubscriberRes<ArrayBean<CateBean>>(rootView){
+        HttpUtils.getSecond(new SubscriberRes<ArrayBean<CateBean>>(rootView) {
             @Override
             public void onSuccess(ArrayBean<CateBean> list) {
                 view.dismissDialog();

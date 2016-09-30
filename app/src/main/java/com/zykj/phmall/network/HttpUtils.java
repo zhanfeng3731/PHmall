@@ -13,7 +13,6 @@ import com.zykj.phmall.beans.FundBean;
 import com.zykj.phmall.beans.HomeBean;
 import com.zykj.phmall.beans.ManagerBean;
 import com.zykj.phmall.beans.MessageBean;
-import com.zykj.phmall.beans.MyInfoBean;
 import com.zykj.phmall.beans.PuScoreBean;
 import com.zykj.phmall.beans.SystemDataBean;
 import com.zykj.phmall.beans.UserBean;
@@ -173,20 +172,22 @@ public class HttpUtils {
     /**
      * 我的资料
      */
-    public static void MyInfo(Subscriber<BaseEntityRes<String>> callback, Map<String, Object> map){
+    public static void MyInfo(Subscriber<BaseEntityRes<String>> callback, Map<String, Object> map) {
         addSubscription(Net.getService().MyInfo(map).subscribeOn(sc1).observeOn(sc2).subscribe(callback));
     }
+
     /**
      * 我的资料
      */
-    public static void MyOpinion(Subscriber<BaseEntityRes<String>> callback, Map<String, Object> map){
+    public static void MyOpinion(Subscriber<BaseEntityRes<String>> callback, Map<String, Object> map) {
         addSubscription(Net.getService().MyOpinion(map).subscribeOn(sc1).observeOn(sc2).subscribe(callback));
     }
+
     /**
      * 系统数据
-     * */
-    public static void SelfSystemData(Subscriber<BaseEntityRes<SystemDataBean>> callback, Map<String, Object> map){
-            addSubscription(Net.getService().SelfSystemData(map).subscribeOn(sc1).observeOn(sc2).subscribe(callback));
+     */
+    public static void SelfSystemData(Subscriber<BaseEntityRes<SystemDataBean>> callback, Map<String, Object> map) {
+        addSubscription(Net.getService().SelfSystemData(map).subscribeOn(sc1).observeOn(sc2).subscribe(callback));
 
     }
 }

@@ -2,6 +2,7 @@ package com.zykj.phmall.base;
 
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.RecyclerView;
+
 import com.zykj.phmall.R;
 import com.zykj.phmall.base.BaseAdapter.OnItemClickListener;
 import com.zykj.phmall.presenter.ListPresenter;

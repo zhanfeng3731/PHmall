@@ -6,7 +6,7 @@ package com.zykj.phmall.beans;
  * Description 轮播图
  */
 
-public class BannerBean extends ErrorBean{
+public class BannerBean extends ErrorBean {
     public String image;//轮播图地址
     public String type;//轮播类型
     public String data;//添加时间

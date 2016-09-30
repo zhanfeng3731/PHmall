@@ -3,6 +3,7 @@ package com.zykj.phmall.activity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+
 import com.zykj.phmall.R;
 import com.zykj.phmall.adapter.CateAdapter;
 import com.zykj.phmall.base.RecycleViewActivity;
@@ -15,7 +16,7 @@ import com.zykj.phmall.presenter.CatePresenter;
  * Description 二级分类
  */
 
-public class ClassActivity extends RecycleViewActivity<CatePresenter,CateAdapter,CateBean> {
+public class ClassActivity extends RecycleViewActivity<CatePresenter, CateAdapter, CateBean> {
 
     @Override
     protected int provideContentViewId() {

@@ -7,7 +7,6 @@ import com.zykj.phmall.R;
 import com.zykj.phmall.base.ToolBarActivity;
 import com.zykj.phmall.presenter.WithdrawPresenter;
 import com.zykj.phmall.utils.ToolsUtils;
-import com.zykj.phmall.view.EntityView;
 import com.zykj.phmall.view.StateView;
 
 import butterknife.Bind;
@@ -56,13 +55,13 @@ public class WithdrawActivity extends ToolBarActivity<WithdrawPresenter> impleme
     }
 
     @OnClick(R.id.tv_btn)
-    protected void submit(){
+    protected void submit() {
         String txt1 = et_txt1.getText().toString();//提现金额
         String txt2 = et_txt2.getText().toString();//收款银行
         String txt3 = et_txt3.getText().toString();//收款账号
         String txt4 = et_txt4.getText().toString();//开户姓名
         String txt5 = et_txt5.getText().toString();//支付密码
-        presenter.submit(rootView,txt1,txt2,txt3,txt4,txt5);//提交表单(申请提现)
+        presenter.submit(rootView, txt1, txt2, txt3, txt4, txt5);//提交表单(申请提现)
     }
 
     @Override
@@ -76,5 +75,6 @@ public class WithdrawActivity extends ToolBarActivity<WithdrawPresenter> impleme
     }
 
     @Override
-    public void verification() {}
+    public void verification() {
+    }
 }

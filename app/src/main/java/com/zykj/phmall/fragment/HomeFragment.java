@@ -8,8 +8,8 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.GridView;
 import android.widget.TextView;
+
 import com.bigkoo.convenientbanner.ConvenientBanner;
-import com.bigkoo.convenientbanner.holder.CBViewHolderCreator;
 import com.xys.libzxing.zxing.activity.CaptureActivity;
 import com.zykj.phmall.R;
 import com.zykj.phmall.activity.AccountActivity;
@@ -19,23 +19,23 @@ import com.zykj.phmall.activity.MainActivity;
 import com.zykj.phmall.activity.ManagerActivity;
 import com.zykj.phmall.activity.MemberActivity;
 import com.zykj.phmall.activity.MessageListActivity;
+import com.zykj.phmall.activity.MyPlanActivity;
+import com.zykj.phmall.activity.MyPosterActivity;
 import com.zykj.phmall.activity.MyPropertyActivity;
 import com.zykj.phmall.activity.NewsActivity;
 import com.zykj.phmall.activity.RechargeActivity;
 import com.zykj.phmall.activity.SignActivity;
 import com.zykj.phmall.activity.WithdrawActivity;
-import com.zykj.phmall.adapter.BannerHolderView;
 import com.zykj.phmall.adapter.CommonAdapter;
 import com.zykj.phmall.adapter.ViewHolder;
 import com.zykj.phmall.base.BaseFragment;
 import com.zykj.phmall.beans.HomeBean;
 import com.zykj.phmall.presenter.HomePresenter;
 import com.zykj.phmall.utils.StringUtil;
-import com.zykj.phmall.utils.ToolsUtils;
 import com.zykj.phmall.view.EntityView;
 
 import java.util.Arrays;
-import java.util.List;
+
 import butterknife.Bind;
 import butterknife.OnClick;
 
@@ -81,7 +81,7 @@ public class HomeFragment extends BaseFragment<HomePresenter> implements OnItemC
             R.mipmap.tixian,R.mipmap.tuijianguanli,R.mipmap.gerenzhongxin,R.mipmap.tubiao};//首页八个图标
     private Class[] activitys = new Class[]{MemberActivity.class,CashActivity.class,
             AccountActivity.class,ManagerActivity.class,WithdrawActivity.class,
-            MemberActivity.class,MemberActivity.class,MemberActivity.class};//首页八个图标
+            MyPlanActivity.class, MemberActivity.class, MemberActivity.class};//首页八个图标
 
     @Override
     protected int provideContentViewId() {
@@ -118,7 +118,8 @@ public class HomeFragment extends BaseFragment<HomePresenter> implements OnItemC
             case R.id.ll_camera://扫一扫
                 startActivityForResult(CaptureActivity.class, 99);
                 break;
-            case R.id.ll_spread://
+            case R.id.ll_spread://推广码
+                startActivity(MyPosterActivity.class);
                 break;
             case R.id.ll_message://消息中心
                 startActivity(MessageListActivity.class);

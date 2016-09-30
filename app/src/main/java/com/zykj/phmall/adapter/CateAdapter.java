@@ -12,7 +12,6 @@ import com.yancy.imageselector.ImageLoader;
 import com.zykj.phmall.R;
 import com.zykj.phmall.base.BaseAdapter;
 import com.zykj.phmall.beans.CateBean;
-import com.zykj.phmall.beans.DataBean;
 import com.zykj.phmall.network.Const;
 import com.zykj.phmall.utils.GlideCircle;
 import com.zykj.phmall.utils.TextUtil;
@@ -39,15 +38,15 @@ public class CateAdapter extends BaseAdapter<CateAdapter.CateHolder, CateBean> i
     public void onBindViewHolder(CateAdapter.CateHolder holder, int position) {
         if(holder.getItemViewType() == TYPE_ITEM){
             final CateBean cate = mData.get(position);
-            if(cate == null) {
+            if (cate == null) {
                 return;
             }
             TextUtil.setText(holder.tv_name, cate.gc_name);
             Glide.with(context).load(Const.getUrl(cate.image))
-                        .fitCenter().crossFade()
-                        .placeholder(type==0?R.mipmap.ico_rectangle:R.mipmap.huodongxinxi)
-                        .transform(new GlideCircle(context))
-                        .into(holder.iv_avatar);
+                    .fitCenter().crossFade()
+                    .placeholder(type == 0 ? R.mipmap.ico_rectangle : R.mipmap.huodongxinxi)
+                    .transform(new GlideCircle(context))
+                    .into(holder.iv_avatar);
         }
     }
 

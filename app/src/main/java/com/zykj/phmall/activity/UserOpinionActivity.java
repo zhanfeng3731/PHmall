@@ -35,7 +35,7 @@ public class UserOpinionActivity extends ToolBarActivity<UserOpinionPresenter> i
 
     @Override
     public void success() {
-        ToolsUtils.toast(this,"提交成功");
+        ToolsUtils.toast(this, "提交成功");
         finish();
     }
 

@@ -32,12 +32,12 @@ public class Const {
     public static final String ADDRESS = "?act=member_address&op=address_list";  //收货地址
     public static final String PUSCORE = "?act=member_points&op=pointslog";  //普积分
     public static final String MANAGER = "?act=member_points&op=reds_pointslog";  //惠积分
-    public static final String WITHDRAW = "?act=member_fund&op=pd_cash_add";	//申请提现
-    public static final String IMGBANNER = "?act=index&op=img_index";			//轮播图
-    public static final String GOODCATE = "?act=goods_class&op=index";			//一级分类
-    public static final String TWOCATE = "?act=goods_class&op=_get_class_list";	//二级分类
-    public static final String MYINFO = "?act=member_index&op=member_information";	//二级分类
-    public static final String MYOPINION = "?act=member_feedback&op=feedback_add";	//二级分类
+    public static final String WITHDRAW = "?act=member_fund&op=pd_cash_add";    //申请提现
+    public static final String IMGBANNER = "?act=index&op=img_index";            //轮播图
+    public static final String GOODCATE = "?act=goods_class&op=index";            //一级分类
+    public static final String TWOCATE = "?act=goods_class&op=_get_class_list";    //二级分类
+    public static final String MYINFO = "?act=member_index&op=member_information";    //二级分类
+    public static final String MYOPINION = "?act=member_feedback&op=feedback_add";    //二级分类
     public static final int OK = 200;
 
     public static String getUrl(String token){

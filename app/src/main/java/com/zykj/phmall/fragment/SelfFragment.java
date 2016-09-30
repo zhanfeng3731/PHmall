@@ -8,7 +8,10 @@ import com.bigkoo.convenientbanner.holder.CBViewHolderCreator;
 import com.zykj.phmall.R;
 import com.zykj.phmall.activity.AddressManageActivity;
 import com.zykj.phmall.activity.CashActivity;
+import com.zykj.phmall.activity.MyIndentActivity;
 import com.zykj.phmall.activity.MyInfoActivity;
+import com.zykj.phmall.activity.MyPlanActivity;
+import com.zykj.phmall.activity.MyPosterActivity;
 import com.zykj.phmall.activity.MyPropertyActivity;
 import com.zykj.phmall.activity.MyStoresActivity;
 import com.zykj.phmall.activity.PersonalSettingActivity;
@@ -51,9 +54,9 @@ public class SelfFragment extends BaseFragment<SelfPresenter> implements EntityV
 
     ConvenientBanner<String> cb_banner;//顶部广告栏控件
     private String[] images = {
-            "http://img2.3lian.com/2014/f2/37/d/39.jpg",
-            "http://f.hiphotos.baidu.com/image/h%3D200/sign=1478eb74d5a20cf45990f9df460b4b0c/d058ccbf6c81800a5422e5fdb43533fa838b4779.jpg",
-            "http://f.hiphotos.baidu.com/image/pic/item/09fa513d269759ee50f1971ab6fb43166c22dfba.jpg"
+            "http://puhui.ofabao.com/data/upload/data/upload/shop/adv/05280265283441014.jpg",
+            "http://puhui.ofabao.com/data/upload/data/upload/shop/adv/05280265013590810.jpg",
+            "http://puhui.ofabao.com/data/upload/data/upload/shop/adv/05199251357876561.jpg"
     };
     private String[] top = {"待付款","待收货","待自提","待评价","退款/退货"};
     private int[] topImgs = new int[]{R.mipmap.daifukuan,R.mipmap.daishouhuo,
@@ -111,14 +114,14 @@ public class SelfFragment extends BaseFragment<SelfPresenter> implements EntityV
     }
 
     @OnClick({R.id.ll_myposter, R.id.ll_myplan, R.id.ll_mysetting, R.id.ll_myaddress, R.id.ll_mymoney,
-            R.id.ll_myshop, R.id.ll_myasset, R.id.iv_back, R.id.ll_myinfo})
+            R.id.ll_myshop, R.id.ll_myasset, R.id.iv_back, R.id.ll_myinfo, R.id.ll_myindent})
     protected void message(View v) {
         switch (v.getId()) {
             case R.id.ll_myposter:
-                startActivity(PersonalSettingActivity.class);
+                startActivity(MyPosterActivity.class);
                 break;
             case R.id.ll_myplan:
-                startActivity(PersonalSettingActivity.class);
+                startActivity(MyPlanActivity.class);
                 break;
             case R.id.ll_mysetting:
                 startActivity(PersonalSettingActivity.class);
@@ -136,10 +139,13 @@ public class SelfFragment extends BaseFragment<SelfPresenter> implements EntityV
                 startActivity(MyPropertyActivity.class);
                 break;
             case R.id.iv_back:
-                startActivity(MyInfoActivity.class);
+                startActivity(PersonalSettingActivity.class);
                 break;
             case R.id.ll_myinfo:
                 startActivity(MyInfoActivity.class);
+                break;
+            case R.id.ll_myindent:
+                startActivity(MyIndentActivity.class);
                 break;
         }
 

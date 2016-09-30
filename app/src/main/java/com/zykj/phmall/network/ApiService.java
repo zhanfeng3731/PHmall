@@ -10,7 +10,6 @@ import com.zykj.phmall.beans.FundBean;
 import com.zykj.phmall.beans.HomeBean;
 import com.zykj.phmall.beans.ManagerBean;
 import com.zykj.phmall.beans.MessageBean;
-import com.zykj.phmall.beans.MyInfoBean;
 import com.zykj.phmall.beans.PuScoreBean;
 import com.zykj.phmall.beans.SystemDataBean;
 import com.zykj.phmall.beans.UserBean;

@@ -14,7 +14,6 @@ import com.zykj.phmall.utils.ToolsUtils;
 import com.zykj.phmall.view.EntityView;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 
@@ -25,12 +24,12 @@ import java.util.List;
  */
 public class HomePresenter extends BasePresenter<EntityView<HomeBean>>{
     //轮播图
-    public void ImgBanner(final ConvenientBanner<String> cb_banner, View rootView){
-        HttpUtils.ImgBanner(new SubscriberRes<ArrayBean<BannerBean>>(rootView){
+    public void ImgBanner(final ConvenientBanner<String> cb_banner, View rootView) {
+        HttpUtils.ImgBanner(new SubscriberRes<ArrayBean<BannerBean>>(rootView) {
             @Override
             public void onSuccess(ArrayBean<BannerBean> banners) {
                 List<String> url = new ArrayList<>();
-                for (BannerBean banner:banners.item){
+                for (BannerBean banner : banners.item) {
                     url.add(banner.image);
                 }
                 ToolsUtils.initBannerSetting(cb_banner, url);//轮播图
