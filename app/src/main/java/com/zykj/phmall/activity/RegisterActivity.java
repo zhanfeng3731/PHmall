@@ -50,12 +50,13 @@ public class RegisterActivity extends ToolBarActivity<RegisterPresenter> impleme
 
     @Override
     protected String provideTitle() {
-//        p = getIntent().getIntExtra("p",0);
+        p = getIntent().getIntExtra("p",0);
         return p == 0 ? "注册" : p == 1 ? "忘记密码" : p == 2 ? "修改登录密码" : "修改支付密码";
     }
 
     @Override
     protected void initAllMembersView() {
+        super.initAllMembersView();
         flag = true;
 //        p = getIntent().getIntExtra("p", 0);
         tv_register.setText(p==0?"注册":"提交");

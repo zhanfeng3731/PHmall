@@ -11,8 +11,10 @@ import com.bumptech.glide.Glide;
 import com.yancy.imageselector.ImageLoader;
 import com.zykj.phmall.R;
 import com.zykj.phmall.base.BaseAdapter;
+import com.zykj.phmall.beans.CateBean;
 import com.zykj.phmall.beans.DataBean;
 import com.zykj.phmall.network.Const;
+import com.zykj.phmall.utils.GlideCircle;
 import com.zykj.phmall.utils.TextUtil;
 
 import butterknife.Bind;
@@ -23,44 +25,29 @@ import butterknife.ButterKnife;
  * Created date 2016/9/14.
  * Description 选择适配器
  */
-public class CateAdapter extends BaseAdapter<CateAdapter.CateHolder, DataBean> implements ImageLoader {
+public class CateAdapter extends BaseAdapter<CateAdapter.CateHolder, CateBean> implements ImageLoader {
 
-    private int id = -1;
+    private int type = 0;
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int position) {
-        this.id = position;
-        notifyDataSetChanged();
-    }
-
-    public CateAdapter(Context context) {
+    public CateAdapter(Context context, boolean flag, int type) {
         super(context);
-    }
-
-    public CateAdapter(Context context, boolean flag) {
-        super(context);
+        this.type = type;
         setShowFooter(flag);
     }
 
     @Override
     public void onBindViewHolder(CateAdapter.CateHolder holder, int position) {
         if(holder.getItemViewType() == TYPE_ITEM){
-            final DataBean user = mData.get(position);
-            if(user == null) {
+            final CateBean cate = mData.get(position);
+            if(cate == null) {
                 return;
             }
-//            if(holder.iv_check != null)
-//                holder.iv_check.setSelected(position == this.id);
-//            TextUtil.setText(holder.tv_name, user.RealName+user.Id);
-//            if(holder.iv_avatar != null)
-//                Glide.with(context).load(Const.getUrl(user.ImagePath))
-//                        .fitCenter().crossFade()
-//                        .transform(new GlideCircleTransform(context))
-//                        .placeholder(R.mipmap.ico_avatar)
-//                        .into(holder.iv_avatar);
+            TextUtil.setText(holder.tv_name, cate.gc_name);
+            Glide.with(context).load(Const.getUrl(cate.image))
+                        .fitCenter().crossFade()
+                        .placeholder(type==0?R.mipmap.ico_rectangle:R.mipmap.huodongxinxi)
+                        .transform(new GlideCircle(context))
+                        .into(holder.iv_avatar);
         }
     }
 

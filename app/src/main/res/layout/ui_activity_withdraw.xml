@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/snack_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -51,7 +52,7 @@
                     android:textSize="@dimen/t_sixteen"
                     android:textColor="@color/theme_black"/>
                 <EditText
-                    android:id="@+id/tv_txt1"
+                    android:id="@+id/et_txt1"
                     style="@style/inputTheme"
                     android:hint="@string/funds_hint1"
                     android:inputType="number" />
@@ -71,7 +72,7 @@
                     android:textSize="@dimen/t_sixteen"
                     android:textColor="@color/theme_black"/>
                 <EditText
-                    android:id="@+id/tv_txt2"
+                    android:id="@+id/et_txt2"
                     style="@style/inputTheme"
                     android:layout_weight="1"
                     android:hint="@string/funds_hint2" />
@@ -95,7 +96,7 @@
                     android:textSize="@dimen/t_sixteen"
                     android:textColor="@color/theme_black"/>
                 <EditText
-                    android:id="@+id/tv_txt3"
+                    android:id="@+id/et_txt3"
                     style="@style/inputTheme"
                     android:hint="@string/funds_hint3"
                     android:inputType="numberSigned" />
@@ -115,7 +116,7 @@
                     android:textSize="@dimen/t_sixteen"
                     android:textColor="@color/theme_black"/>
                 <EditText
-                    android:id="@+id/tv_txt4"
+                    android:id="@+id/et_txt4"
                     style="@style/inputTheme"
                     android:hint="@string/funds_hint4" />
             </LinearLayout>
@@ -134,7 +135,7 @@
                     android:textSize="@dimen/t_sixteen"
                     android:textColor="@color/theme_black"/>
                 <EditText
-                    android:id="@+id/tv_txt5"
+                    android:id="@+id/et_txt5"
                     style="@style/inputTheme"
                     android:hint="@string/funds_hint5"
                     android:inputType="textPassword" />

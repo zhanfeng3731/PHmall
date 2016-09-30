@@ -5,6 +5,7 @@ import android.widget.EditText;
 import com.zykj.phmall.R;
 import com.zykj.phmall.base.ToolBarActivity;
 import com.zykj.phmall.presenter.UserOpinionPresenter;
+import com.zykj.phmall.utils.ToolsUtils;
 import com.zykj.phmall.view.StateView;
 
 import butterknife.Bind;
@@ -34,7 +35,7 @@ public class UserOpinionActivity extends ToolBarActivity<UserOpinionPresenter> i
 
     @Override
     public void success() {
-        snb("提交成功");
+        ToolsUtils.toast(this,"提交成功");
         finish();
     }
 
@@ -43,7 +44,7 @@ public class UserOpinionActivity extends ToolBarActivity<UserOpinionPresenter> i
 
     }
 
-    @OnClick(R.id.tv_sure)
+    @OnClick(R.id.tv_submit)
     protected void submit() {
         String feedback = et_opinion.getText().toString();
         presenter.submit(rootView, feedback);//提交表单(用户反馈)

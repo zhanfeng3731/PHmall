@@ -4,10 +4,13 @@ import com.zykj.phmall.beans.AddressBean;
 import com.zykj.phmall.beans.AnnounceBean;
 import com.zykj.phmall.beans.ArrayBean;
 import com.zykj.phmall.beans.AssetBean;
+import com.zykj.phmall.beans.BannerBean;
+import com.zykj.phmall.beans.CateBean;
 import com.zykj.phmall.beans.FundBean;
 import com.zykj.phmall.beans.HomeBean;
 import com.zykj.phmall.beans.ManagerBean;
 import com.zykj.phmall.beans.MessageBean;
+import com.zykj.phmall.beans.MyInfoBean;
 import com.zykj.phmall.beans.PuScoreBean;
 import com.zykj.phmall.beans.SystemDataBean;
 import com.zykj.phmall.beans.UserBean;
@@ -148,18 +151,38 @@ public interface ApiService {
 	@POST(Const.VOUCHER)
 	Observable<BaseEntityRes<ArrayBean<VoucherBean>>> SystemVoucher(@FieldMap Map<String, Object> params);
 
-	//我的信息
+	//申请提现
+	@FormUrlEncoded
+	@POST(Const.WITHDRAW)
+	Observable<BaseEntityRes<Object>> Withdraw(@FieldMap Map<String, Object> params);
+
+	//轮播图
+	@FormUrlEncoded
+	@POST(Const.IMGBANNER)
+	Observable<BaseEntityRes<ArrayBean<BannerBean>>> ImgBanner(@FieldMap Map<String, Object> params);
+
+	//一级分类
+	@FormUrlEncoded
+	@POST(Const.GOODCATE)
+	Observable<BaseEntityRes<ArrayBean<CateBean>>> CateList(@FieldMap Map<String, Object> params);
+
+	//二级分类
+	@FormUrlEncoded
+	@POST(Const.TWOCATE)
+	Observable<BaseEntityRes<ArrayBean<CateBean>>> getSecond(@FieldMap Map<String, Object> params);
+
+	//我的资料
 	@FormUrlEncoded
 	@POST(Const.MYINFO)
 	Observable<BaseEntityRes<String>> MyInfo(@FieldMap Map<String, Object> params);
 
-	//系统数据
+	//用户反馈
 	@FormUrlEncoded
-	@POST(Const.SYSTEMDATA)
-	Observable<BaseEntityRes<SystemDataBean>> SelfSystemData(@FieldMap Map<String, Object> params);
+	@POST(Const.MYOPINION)
+	Observable<BaseEntityRes<String>> MyOpinion(@FieldMap Map<String, Object> params);
 
 	//用户反馈
 	@FormUrlEncoded
-	@POST(Const.MYFEEDBACK)
-	Observable<BaseEntityRes<String>> MyOpinion(@FieldMap Map<String, Object> params);
+	@POST(Const.SYSTEMDATA)
+	Observable<BaseEntityRes<SystemDataBean>> SelfSystemData(@FieldMap Map<String, Object> params);
 }

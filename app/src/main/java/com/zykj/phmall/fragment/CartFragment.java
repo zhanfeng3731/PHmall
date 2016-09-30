@@ -1,5 +1,7 @@
 package com.zykj.phmall.fragment;
 
+import android.view.View;
+
 import com.zykj.phmall.R;
 import com.zykj.phmall.base.BasePresenter;
 import com.zykj.phmall.base.ToolBarFragment;
@@ -26,5 +28,11 @@ public class CartFragment extends ToolBarFragment<BasePresenter<EntityView<DataB
     @Override
     public BasePresenter createPresenter() {
         return null;
+    }
+
+    @Override
+    protected void initAllMembersView(View view) {
+        super.initAllMembersView(view);
+        iv_back.setVisibility(View.GONE);
     }
 }

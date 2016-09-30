@@ -15,4 +15,6 @@ public class ArrayBean<M> extends ErrorBean{
     public ArrayList<M> redpacket_list;
     public ArrayList<M> address_list;
     public ArrayList<M> log_list;
+    public ArrayList<M> item;
+    public ArrayList<M> class_list;
 }

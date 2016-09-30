@@ -19,7 +19,9 @@ import com.zykj.phmall.activity.MainActivity;
 import com.zykj.phmall.activity.ManagerActivity;
 import com.zykj.phmall.activity.MemberActivity;
 import com.zykj.phmall.activity.MessageListActivity;
+import com.zykj.phmall.activity.MyPropertyActivity;
 import com.zykj.phmall.activity.NewsActivity;
+import com.zykj.phmall.activity.RechargeActivity;
 import com.zykj.phmall.activity.SignActivity;
 import com.zykj.phmall.activity.WithdrawActivity;
 import com.zykj.phmall.adapter.BannerHolderView;
@@ -99,14 +101,15 @@ public class HomeFragment extends BaseFragment<HomePresenter> implements OnItemC
     @Override
     protected void initAllMembersView(View view) {
         tv_head.setText(provideTitle());//标题
-        ToolsUtils.initBannerSetting(cb_banner, Arrays.asList(images));//轮播图
         setEightIconModule();//八个图标
 
+        presenter.ImgBanner(cb_banner, rootView);//轮播图
         presenter.SystemData(rootView,0);//系统数据
         presenter.SystemData(rootView,1);//用户数据
     }
 
-    @OnClick({R.id.tv_sign, R.id.ll_camera, R.id.ll_spread, R.id.ll_message, R.id.ll_message1, R.id.ll_message2})
+    @OnClick({R.id.tv_sign, R.id.ll_camera, R.id.ll_spread, R.id.ll_message, R.id.ll_user,
+            R.id.ll_message1, R.id.ll_message2, R.id.tv_recharge, R.id.tv_withdraw, R.id.tv_detail})
     protected void door(View view){
         switch (view.getId()){
             case R.id.tv_sign://签到
@@ -125,6 +128,18 @@ public class HomeFragment extends BaseFragment<HomePresenter> implements OnItemC
                 break;
             case R.id.ll_message2://资讯中心
                 startActivity(NewsActivity.class);
+                break;
+            case R.id.ll_user://用户数据
+                startActivity(MyPropertyActivity.class);
+                break;
+            case R.id.tv_recharge://充值
+                startActivity(RechargeActivity.class);
+                break;
+            case R.id.tv_withdraw://提现
+                startActivity(WithdrawActivity.class);
+                break;
+            case R.id.tv_detail://查看明细
+                startActivity(AccountActivity.class);
                 break;
         }
     }
